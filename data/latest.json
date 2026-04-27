@@ -1,6 +1,6 @@
 {
   "date": "2026-04-24",
-  "last_updated_utc": "2026-04-27T08:38:48.863083+00:00",
+  "last_updated_utc": "2026-04-27T09:03:04.699303+00:00",
   "market_read": "AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
@@ -12,7 +12,7 @@
     "core_tickers_ok": true,
     "core_missing_tickers": [],
     "latest_trading_date": "2026-04-24",
-    "last_updated_utc": "2026-04-27T08:38:48.863083+00:00",
+    "last_updated_utc": "2026-04-27T09:03:04.699303+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
@@ -28,6 +28,22 @@
     "name": "Bottleneck Easing, ROI Holding"
   },
   "confidence": "Medium",
+  "interpretation": {
+    "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure.",
+    "why": [
+      "ASIC / Networking Rotation is elevated (92), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
+      "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure.",
+      "Breadth is healthy, so the move is not limited to one or two AI stocks.",
+      "TSM is underperforming SMH, so foundry leadership is not confirming the broader semiconductor move."
+    ],
+    "watch_next": [
+      "If Demand Score rises above 60 while Stress stays low, the regime shifts toward a broad, confirmed bull phase (A).",
+      "If Rotation stays very high but Demand fails to improve, ASIC/networking may become a crowded sub-theme rather than a broad AI confirmation.",
+      "If Stress rises above 60 while Bottleneck remains high, watch for a shift toward Hardware Late-Cycle Squeeze (C).",
+      "If TSM continues to underperform SMH, foundry confirmation remains a key missing link."
+    ],
+    "investor_reading": "The market appears to be rewarding ASIC, networking, and scale-out infrastructure exposure more than pure GPU beta. That does not mean NVIDIA demand is collapsing; it suggests leadership may be broadening or rotating within the AI infrastructure chain."
+  },
   "divergence_warnings": [
     {
       "type": "TSM_Underperformance",
