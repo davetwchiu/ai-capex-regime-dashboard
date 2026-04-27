@@ -1,0 +1,9 @@
+{
+  "demand": ["MSFT", "AMZN", "GOOGL", "META", "ORCL", "AAPL", "TSM"],
+  "bottleneck": ["NVDA", "TSM", "AVGO", "MRVL", "MU", "ANET", "ASML", "AMAT", "LRCX", "KLAC"],
+  "networking_optical": ["ANET", "AVGO", "MRVL", "CRDO", "ALAB", "COHR", "LITE"],
+  "power_cooling": ["VRT", "ETN", "GEV", "CEG", "VST"],
+  "stress": ["CRWV", "NBIS", "APLD"],
+  "credit": ["HYG", "LQD"],
+  "baselines": ["QQQ", "SPY", "SOXX", "SMH"]
+}
