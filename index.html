@@ -28,6 +28,32 @@
             <p id="market-read" class="market-read-text"></p>
         </section>
 
+        <section class="card interpretation-card" id="interpretation-section">
+            <h3>Plain-English Interpretation</h3>
+            
+            <div class="interpretation-block">
+                <h4>What this means today</h4>
+                <p id="interp-plain">Interpretation unavailable. Please wait or rerun the scoring script.</p>
+            </div>
+
+            <div class="interpretation-grid">
+                <div class="interpretation-block">
+                    <h4>Why the model says this</h4>
+                    <ul id="interp-why"></ul>
+                </div>
+
+                <div class="interpretation-block">
+                    <h4>What to watch next</h4>
+                    <ul id="interp-watch"></ul>
+                </div>
+            </div>
+
+            <div class="interpretation-block investor-reading">
+                <h4>Investor reading</h4>
+                <p id="interp-investor"></p>
+            </div>
+        </section>
+
         <section id="divergences-section" class="divergences hidden">
             <h4>Key Divergences</h4>
             <ul id="divergences-list" class="divergences-list"></ul>
@@ -50,28 +76,38 @@
             <div class="score-card">
                 <h3>Demand Score</h3>
                 <div class="score-value" id="score-demand">--</div>
+                <div class="score-label" id="label-demand">--</div>
                 <p class="score-desc">Platform ROI vs QQQ</p>
+                <p class="score-question">Are platforms/hyperscalers confirming AI ROI?</p>
             </div>
             <div class="score-card">
                 <h3>Bottleneck Score</h3>
                 <div class="score-value" id="score-bottleneck">--</div>
+                <div class="score-label" id="label-bottleneck">--</div>
                 <p class="score-desc">AI Hardware vs SMH</p>
+                <p class="score-question">Are hardware bottleneck suppliers still outperforming?</p>
             </div>
             <div class="score-card">
                 <h3>ASIC / Networking Rotation</h3>
                 <div class="score-value" id="score-substitution">--</div>
+                <div class="score-label" id="label-substitution">--</div>
                 <p class="score-desc">ASIC/Networking vs NVDA</p>
                 <p class="score-diagnostic" id="rotation-diagnostic"></p>
+                <p class="score-question">Is leadership shifting from GPU beta to ASIC/networking?</p>
             </div>
             <div class="score-card">
                 <h3>Stress Score</h3>
                 <div class="score-value" id="score-stress">--</div>
+                <div class="score-label" id="label-stress">--</div>
                 <p class="score-desc">Drawdown / Credit / Infra Underperf.</p>
+                <p class="score-question">Are neocloud/credit/high-beta infra signals deteriorating?</p>
             </div>
             <div class="score-card">
                 <h3>Breadth Score</h3>
                 <div class="score-value" id="score-breadth">--</div>
+                <div class="score-label" id="label-breadth">--</div>
                 <p class="score-desc">Composite: 20D MA, 50D MA, vs Benchmarks</p>
+                <p class="score-question">Is the AI-chain move broad or narrow?</p>
             </div>
         </section>
 
@@ -115,6 +151,17 @@
                 </table>
             </section>
         </div>
+
+        <section class="card how-to-read">
+            <h3>How to read this dashboard</h3>
+            <ol>
+                <li><strong>Start with Data Health.</strong> If the status is not OK, be cautious about interpreting the scores.</li>
+                <li><strong>Read the Plain-English Interpretation</strong> before diving into the numbers to get the market narrative.</li>
+                <li><strong>Use Scores</strong> to identify the underlying drivers.</li>
+                <li><strong>Use Key Divergences</strong> to spot early cracks or leadership changes underneath the surface.</li>
+                <li><strong>Check the Matrix</strong> for today's visual regime position, and <strong>History</strong> to see how momentum is changing.</li>
+            </ol>
+        </section>
 
         <section class="methodology card">
             <h3>Methodology & Limitations</h3>
