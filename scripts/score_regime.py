@@ -59,7 +59,7 @@ bot_60 = get_basket_return(tickers['bottleneck'], 60) - get_return('SMH', 60)
 bot_120 = get_basket_return(tickers['bottleneck'], 120) - get_return('SMH', 120)
 bottleneck_score = normalize((bot_20 * 0.4) + (bot_60 * 0.4) + (bot_120 * 0.2))
 
-# 3. Substitution (ASIC / Networking Rotation) Score - Soft Tanh Normalization
+# 3. Substitution (ASIC / Networking Rotation) Score
 sub_20 = get_basket_return(['AVGO', 'MRVL', 'ANET', 'CRDO'], 20) - get_return('NVDA', 20)
 sub_60 = get_basket_return(['AVGO', 'MRVL', 'ANET', 'CRDO'], 60) - get_return('NVDA', 60)
 rotation_raw = (sub_20 * 0.5) + (sub_60 * 0.5)
@@ -156,6 +156,7 @@ closest = distances[0]
 second_closest = distances[1]
 
 ratio = closest[2] / second_closest[2] if second_closest[2] > 0 else 0
+closest_code = closest[0]
 
 if regime == "Mixed / Transition":
     if ratio <= 0.55: confidence = "High"
@@ -166,30 +167,10 @@ else:
     elif ratio <= 0.85: confidence = "Medium"
     else: confidence = "Low"
 
-
-# --- Rule-Based Market Read ---
-mr_parts = []
-if breadth_score >= 60 and stress_score < 50 and substitution_score >= 70:
-    mr_parts.append("AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta.")
-elif demand_score < 50 and bottleneck_score >= 60:
-    mr_parts.append("Hardware scarcity remains supported, but platform demand confirmation is weakening.")
-elif demand_score < 40 and bottleneck_score < 40 and stress_score >= 60:
-    mr_parts.append("Market is pricing rising CAPEX bubble concern with broad weakness and high stress.")
-elif demand_score >= 60 and bottleneck_score >= 60:
-    mr_parts.append("Market is pricing a healthy AI CAPEX expansion with strong platform demand and tight hardware bottlenecks.")
-else:
-    mr_parts.append("Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence.")
-
-tsm_vs_smh = get_return('TSM', 20) - smh_20d
-if tsm_vs_smh < -0.05:
-    mr_parts.append("TSM underperformance weakens foundry confirmation.")
-
-market_read = " ".join(mr_parts)
-
-
 # --- Divergence Warnings ---
 divergences = []
 nvda_vs_qqq = get_return('NVDA', 20) - qqq_20d
+tsm_vs_smh = get_return('TSM', 20) - smh_20d
 
 if nvda_vs_qqq > 0.05 and demand_score < 50:
     sev = "high" if nvda_vs_qqq > 0.10 else "medium"
@@ -205,6 +186,97 @@ if bottleneck_score > 60 and stress_score > 60:
 if bottleneck_score > 60 and breadth_score < 45:
     sev = "high" if breadth_score < 35 else "medium"
     divergences.append({"type": "Narrow_Leadership", "severity": sev, "message": "Bottleneck strength is narrow. Fewer AI-chain stocks are confirming the move."})
+
+
+# --- Rule-Based Market Read (Short string) ---
+mr_parts = []
+if breadth_score >= 60 and stress_score < 50 and substitution_score >= 70:
+    mr_parts.append("AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta.")
+elif demand_score < 50 and bottleneck_score >= 60:
+    mr_parts.append("Hardware scarcity remains supported, but platform demand confirmation is weakening.")
+elif demand_score < 40 and bottleneck_score < 40 and stress_score >= 60:
+    mr_parts.append("Market is pricing rising CAPEX bubble concern with broad weakness and high stress.")
+elif demand_score >= 60 and bottleneck_score >= 60:
+    mr_parts.append("Market is pricing a healthy AI CAPEX expansion with strong platform demand and tight hardware bottlenecks.")
+else:
+    mr_parts.append("Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence.")
+
+if tsm_vs_smh < -0.05:
+    mr_parts.append("TSM underperformance weakens foundry confirmation.")
+
+market_read = " ".join(mr_parts)
+
+
+# --- Plain English Interpretation Engine ---
+plain_english = ""
+why_list = []
+watch_list = []
+investor_reading = ""
+
+prefix = "The hard regime is mixed, but the closest profile is %s. This means the model does not see a clean regime break, but the current pattern most resembles %s. " % (closest_code, closest[1]) if regime == "Mixed / Transition" else ""
+
+if closest_code == "B":
+    plain_english = prefix + "The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure."
+    
+    if substitution_score >= 60: why_list.append(f"ASIC / Networking Rotation is elevated ({round(substitution_score)}), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.")
+    if stress_score < 60: why_list.append("Stress is contained, so the market is not currently pricing broad CAPEX funding pressure.")
+    if breadth_score >= 60: why_list.append("Breadth is healthy, so the move is not limited to one or two AI stocks.")
+    if tsm_vs_smh < -0.05: why_list.append("TSM is underperforming SMH, so foundry leadership is not confirming the broader semiconductor move.")
+    if not why_list: why_list.append("Scores lean slightly toward a rotation profile, though without strong extremes.")
+
+    watch_list.append("If Demand Score rises above 60 while Stress stays low, the regime shifts toward a broad, confirmed bull phase (A).")
+    watch_list.append("If Rotation stays very high but Demand fails to improve, ASIC/networking may become a crowded sub-theme rather than a broad AI confirmation.")
+    watch_list.append("If Stress rises above 60 while Bottleneck remains high, watch for a shift toward Hardware Late-Cycle Squeeze (C).")
+    if tsm_vs_smh < -0.05: watch_list.append("If TSM continues to underperform SMH, foundry confirmation remains a key missing link.")
+
+    investor_reading = "The market appears to be rewarding ASIC, networking, and scale-out infrastructure exposure more than pure GPU beta. That does not mean NVIDIA demand is collapsing; it suggests leadership may be broadening or rotating within the AI infrastructure chain."
+
+elif closest_code == "A":
+    plain_english = prefix + "The market is pricing a healthy AI CAPEX expansion: platform demand is strong, hardware bottlenecks remain valuable, breadth is supportive, and stress is contained."
+    
+    if demand_score >= 60: why_list.append("Demand Score is high, indicating platforms and hyperscalers are outperforming benchmarks.")
+    if bottleneck_score >= 60: why_list.append("Bottleneck Score is high, confirming AI hardware suppliers continue to lead the semiconductor index.")
+    if stress_score < 60: why_list.append("Stress is low/moderate, meaning high-beta infrastructure and credit are holding up.")
+    if breadth_score >= 60: why_list.append("Breadth is healthy, confirming wide market participation.")
+    
+    watch_list.append("Watch for Demand staying above 60 to confirm ongoing ROI confidence.")
+    watch_list.append("Watch for Stress staying below 60 to confirm lack of funding panic.")
+    watch_list.append("Watch TSM and NVDA to ensure core leadership continues confirming semiconductor strength.")
+
+    investor_reading = "The market is rewarding both platform ROI and bottleneck suppliers. This is the most constructive regime for broad AI infrastructure exposure."
+
+elif closest_code == "C":
+    plain_english = prefix + "The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising."
+    
+    if bottleneck_score >= 60: why_list.append("Bottleneck Score is high, meaning hardware scarcity is still being rewarded.")
+    if demand_score < 60: why_list.append("Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.")
+    if stress_score >= 60: why_list.append("Stress is rising/high, showing strain in high-beta AI infrastructure or credit proxies.")
+
+    watch_list.append("If Demand falls further, the divergence between hardware providers and their customers widens dangerously.")
+    watch_list.append("If Stress continues to spike, the market may transition from a 'squeeze' into outright CAPEX Bubble Fear (D).")
+
+    investor_reading = "Hardware names may still look strong, but risk is rising because customer-side ROI confirmation is less clear. This environment typically warrants caution and a preference for quality over highly levered beta."
+
+elif closest_code == "D":
+    plain_english = prefix + "The market is pricing rising AI CAPEX bubble concern: demand confirmation is weak, bottleneck leadership is fading, stress is high, and breadth is poor."
+    
+    if demand_score < 50: why_list.append("Demand Score is weak, suggesting lack of confidence in platform ROI.")
+    if bottleneck_score < 50: why_list.append("Bottleneck leadership is fading against broader benchmarks.")
+    if stress_score >= 60: why_list.append("Stress is high, reflecting drawdowns in high-beta AI infrastructure and neocloud names.")
+    if breadth_score < 50: why_list.append("Breadth is poor, indicating very narrow participation across the AI chain.")
+
+    watch_list.append("Watch for any recovery in Breadth or Demand as early signs of stabilization.")
+    watch_list.append("Watch Credit spreads (HYG/LQD) to see if AI stress is bleeding into broader macro liquidity.")
+
+    investor_reading = "The market is punishing high-beta AI infrastructure and long-duration hardware stories. Balance-sheet quality, cash-flow durability, and defensive positioning matter more in this regime."
+
+interpretation = {
+    "plain_english": plain_english,
+    "why": why_list,
+    "watch_next": watch_list,
+    "investor_reading": investor_reading
+}
+
 
 # --- Data Health Logic ---
 now = datetime.now(timezone.utc)
@@ -267,6 +339,7 @@ output = {
         "name": closest[1]
     },
     "confidence": confidence,
+    "interpretation": interpretation,
     "divergence_warnings": divergences,
     "scores": {
         "demand": round(demand_score, 1),
