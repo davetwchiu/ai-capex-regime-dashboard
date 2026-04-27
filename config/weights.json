@@ -11,5 +11,11 @@
   "thresholds": {
     "high": 60,
     "low": 40
+  },
+  "target_vectors": {
+    "A": { "name": "True Bottleneck Still Tight", "demand": 75, "bottleneck": 75, "substitution": 50, "stress": 25, "breadth": 75 },
+    "B": { "name": "Bottleneck Easing, ROI Holding", "demand": 60, "bottleneck": 45, "substitution": 75, "stress": 35, "breadth": 65 },
+    "C": { "name": "Hardware Late-Cycle Squeeze", "demand": 40, "bottleneck": 75, "substitution": 50, "stress": 75, "breadth": 40 },
+    "D": { "name": "CAPEX Bubble Fear", "demand": 30, "bottleneck": 30, "substitution": 60, "stress": 80, "breadth": 30 }
   }
 }
