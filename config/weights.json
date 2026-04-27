@@ -1,0 +1,15 @@
+{
+  "horizons": {
+    "20D": 0.40,
+    "60D": 0.40,
+    "120D": 0.20
+  },
+  "normalization": {
+    "max_return_clip": 0.15,
+    "min_return_clip": -0.15
+  },
+  "thresholds": {
+    "high": 60,
+    "low": 40
+  }
+}
