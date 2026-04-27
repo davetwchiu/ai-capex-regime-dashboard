@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI CAPEX Regime Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI CAPEX Regime Dashboard</h1>
+            <p>Market-implied monitor of AI hardware bottlenecks, ROI confidence, substitution, and CAPEX stress.</p>
+            <div class="meta-info">
+                <span id="last-updated">Loading...</span>
+                <span id="regime-badge" class="badge">--</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card regime-card">
+            <h2 id="regime-name">Analyzing Market Data...</h2>
+            <p id="regime-summary">Please wait while the latest market inferences are loaded.</p>
+        </section>
+
+        <section class="scores-grid">
+            <div class="score-card">
+                <h3>Demand Score</h3>
+                <div class="score-value" id="score-demand">--</div>
+                <p class="score-desc">Platform ROI vs QQQ</p>
+            </div>
+            <div class="score-card">
+                <h3>Bottleneck Score</h3>
+                <div class="score-value" id="score-bottleneck">--</div>
+                <p class="score-desc">AI Hardware vs SMH</p>
+            </div>
+            <div class="score-card">
+                <h3>Substitution</h3>
+                <div class="score-value" id="score-substitution">--</div>
+                <p class="score-desc">ASIC/Net vs NVDA</p>
+            </div>
+            <div class="score-card">
+                <h3>Stress Score</h3>
+                <div class="score-value" id="score-stress">--</div>
+                <p class="score-desc">Infra Underperformance</p>
+            </div>
+            <div class="score-card">
+                <h3>Breadth Score</h3>
+                <div class="score-value" id="score-breadth">--</div>
+                <p class="score-desc">% Above 20D MA</p>
+            </div>
+        </section>
+
+        <div class="two-col">
+            <section class="card chart-container">
+                <h3>Regime Map (Demand vs Bottleneck)</h3>
+                <canvas id="regimeChart"></canvas>
+            </section>
+            
+            <section class="card">
+                <h3>Key Relative Ratios (20D)</h3>
+                <table id="ratios-table">
+                    <thead>
+                        <tr><th>Ratio</th><th>Change (%)</th></tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </section>
+        </div>
+
+        <section id="warnings-section" class="warnings hidden">
+            <h4>System Warnings</h4>
+            <ul id="warnings-list"></ul>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
