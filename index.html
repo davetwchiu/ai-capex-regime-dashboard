@@ -31,6 +31,19 @@
             <ul id="divergences-list"></ul>
         </section>
 
+        <section class="card data-health-card">
+            <h3>Data Health: <span id="dh-status" class="badge">--</span></h3>
+            <div id="dh-message" class="dh-message"></div>
+            <div class="dh-grid">
+                <div><strong>Source:</strong> <span id="dh-source"></span></div>
+                <div><strong>Latest Trade Date:</strong> <span id="dh-date"></span></div>
+                <div><strong>Updated (UTC):</strong> <span id="dh-updated"></span></div>
+                <div><strong>Retrieval:</strong> <span id="dh-retrieval"></span></div>
+                <div><strong>Core Tickers:</strong> <span id="dh-core"></span></div>
+                <div id="dh-failed-container" class="hidden"><strong>Failed:</strong> <span id="dh-failed"></span></div>
+            </div>
+        </section>
+
         <section class="scores-grid">
             <div class="score-card">
                 <h3>Demand Score</h3>
@@ -61,6 +74,28 @@
 
         <div class="two-col">
             <section class="card chart-container">
+                <h3>Current Regime Matrix</h3>
+                <canvas id="regimeMatrixChart"></canvas>
+                <div class="quadrant-labels">
+                    <p><strong>A:</strong> High Demand + High Bottleneck (True Bottleneck)</p>
+                    <p><strong>B:</strong> High/Neutral Demand + Lower Bottleneck + High Rotation (Easing)</p>
+                    <p><strong>C:</strong> Weak/Neutral Demand + High Bottleneck + Rising Stress (Squeeze)</p>
+                    <p><strong>D:</strong> Weak Demand + Weak Bottleneck + High Stress (Bubble Fear)</p>
+                </div>
+            </section>
+            <section class="card">
+                <h3>Third-Axis Readings</h3>
+                <table class="third-axis-table">
+                    <tr><td>Stress:</td><td id="ta-stress">--</td></tr>
+                    <tr><td>ASIC/Net Rotation:</td><td id="ta-rotation">--</td></tr>
+                    <tr><td>Breadth:</td><td id="ta-breadth">--</td></tr>
+                    <tr><td>Closest Profile:</td><td id="ta-closest">--</td></tr>
+                </table>
+            </section>
+        </div>
+
+        <div class="two-col">
+            <section class="card chart-container">
                 <h3>Regime History (Scores over time)</h3>
                 <canvas id="historyChart"></canvas>
                 <p id="history-warning" class="hidden">Regime history will appear after several daily updates.</p>
@@ -77,11 +112,6 @@
                 </table>
             </section>
         </div>
-
-        <section id="warnings-section" class="warnings hidden">
-            <h4>System Warnings</h4>
-            <ul id="warnings-list"></ul>
-        </section>
 
         <section class="methodology card">
             <h3>Methodology & Limitations</h3>
