@@ -6,6 +6,7 @@
     <title>AI CAPEX Regime Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.0.1/dist/chartjs-plugin-annotation.min.js"></script>
 </head>
 <body>
     <header>
@@ -24,11 +25,12 @@
         <section class="card regime-card">
             <h2 id="regime-name">Analyzing Market Data...</h2>
             <p id="closest-regime" class="closest-regime-text"></p>
+            <p id="market-read" class="market-read-text"></p>
         </section>
 
         <section id="divergences-section" class="divergences hidden">
             <h4>Key Divergences</h4>
-            <ul id="divergences-list"></ul>
+            <ul id="divergences-list" class="divergences-list"></ul>
         </section>
 
         <section class="card data-health-card">
