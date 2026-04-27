@@ -21,6 +21,32 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('market-read').textContent = data.market_read;
         }
 
+        // Plain English Interpretation
+        if (data.interpretation) {
+            document.getElementById('interp-plain').textContent = data.interpretation.plain_english;
+            
+            const whyList = document.getElementById('interp-why');
+            data.interpretation.why.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                whyList.appendChild(li);
+            });
+
+            const watchList = document.getElementById('interp-watch');
+            data.interpretation.watch_next.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                watchList.appendChild(li);
+            });
+
+            document.getElementById('interp-investor').textContent = data.interpretation.investor_reading;
+        } else {
+            // Keep fallback text visible
+            document.getElementById('interp-why').innerHTML = "<li>Not generated in this run.</li>";
+            document.getElementById('interp-watch').innerHTML = "<li>Not generated in this run.</li>";
+            document.getElementById('interp-investor').textContent = "Interpretation not available.";
+        }
+
         // Divergences with Severity Badges
         if (data.divergence_warnings && data.divergence_warnings.length > 0) {
             const divSec = document.getElementById('divergences-section');
@@ -72,16 +98,43 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.getElementById('dh-failed').textContent = dh.failed_tickers.join(', ');
         }
 
+        // Score Card Helpers
+        const getStandardLabel = (val) => {
+            if (val >= 80) return "Extreme";
+            if (val >= 60) return "High";
+            if (val >= 40) return "Neutral";
+            return "Low";
+        };
+        const getStressLabel = (val) => {
+            if (val >= 80) return "Extreme stress";
+            if (val >= 60) return "High stress";
+            if (val >= 40) return "Moderate stress";
+            return "Low stress";
+        };
+
         // Scores
         const scores = ['demand', 'bottleneck', 'substitution', 'stress', 'breadth'];
         scores.forEach(s => {
-            const el = document.getElementById(`score-${s}`);
-            el.textContent = data.scores[s];
-            if (data.scores[s] >= 60) el.style.color = s === 'stress' ? 'var(--danger)' : 'var(--success)';
-            if (data.scores[s] < 40) el.style.color = s === 'stress' ? 'var(--success)' : 'var(--danger)';
+            const val = data.scores[s];
+            const valEl = document.getElementById(`score-${s}`);
+            const lblEl = document.getElementById(`label-${s}`);
+            
+            valEl.textContent = val;
+            lblEl.textContent = s === 'stress' ? getStressLabel(val) : getStandardLabel(val);
+
+            // Coloring logic
+            if (val >= 60) {
+                valEl.style.color = s === 'stress' ? 'var(--danger)' : 'var(--success)';
+                lblEl.style.color = s === 'stress' ? 'var(--danger)' : 'var(--success)';
+            } else if (val < 40) {
+                valEl.style.color = s === 'stress' ? 'var(--success)' : 'var(--danger)';
+                lblEl.style.color = s === 'stress' ? 'var(--success)' : 'var(--danger)';
+            } else {
+                lblEl.style.color = 'var(--text-muted)';
+            }
         });
         
-        // Populate Rotation Diagnostics (Raw numbers)
+        // Populate Rotation Diagnostics
         if (data.rotation_details) {
             const rd = data.rotation_details;
             const diagEl = document.getElementById('rotation-diagnostic');
@@ -90,7 +143,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         }
 
-        // Regime Matrix Render (with Annotations plugin for lines)
+        // Regime Matrix Render
         Chart.register(window['chartjs-plugin-annotation']);
         const ctxMatrix = document.getElementById('regimeMatrixChart').getContext('2d');
         const dScore = data.scores.demand;
@@ -144,12 +197,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
         // Third Axis Readings Helper
-        const getLabel = (val) => val >= 60 ? "High" : (val <= 40 ? "Low" : "Neutral");
-        const getRotationLabel = (val) => val >= 80 ? "Extreme" : (val >= 60 ? "High" : (val <= 40 ? "Low" : "Neutral"));
         const getBreadthLabel = (val) => val >= 60 ? "Healthy" : (val <= 40 ? "Weak" : "Neutral");
 
-        document.getElementById('ta-stress').textContent = getLabel(sScore);
-        document.getElementById('ta-rotation').textContent = getRotationLabel(rScore);
+        document.getElementById('ta-stress').textContent = getStressLabel(sScore).replace(" stress", "");
+        document.getElementById('ta-rotation').textContent = getStandardLabel(rScore);
         document.getElementById('ta-breadth').textContent = getBreadthLabel(data.scores.breadth);
         document.getElementById('ta-closest').textContent = `${data.closest_regime.code} (${data.confidence})`;
 
