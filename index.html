@@ -6,6 +6,7 @@
     <title>AI CAPEX Regime Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.0.1/dist/chartjs-plugin-annotation.min.js"></script>
 </head>
 <body>
@@ -132,7 +133,13 @@
                 </table>
             </section>
         </div>
-
+        <section class="card">
+    <h3>Interactive 3D Regime View</h3>
+    <p class="section-note">
+        X = Demand, Y = Bottleneck, Z = Stress. Marker colour reflects ASIC / Networking Rotation; marker size reflects Breadth.
+    </p>
+    <div id="regime3DChart" class="regime-3d-chart"></div>
+</section>
         <div class="two-col">
             <section class="card chart-container">
                 <h3>Regime History (Scores over time)</h3>
