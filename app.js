@@ -3,21 +3,39 @@ document.addEventListener('DOMContentLoaded', async () => {
         const response = await fetch('data/latest.json');
         const data = await response.json();
 
-        // Header
-        document.getElementById('last-updated').textContent = `Date: ${data.date}`;
-        document.getElementById('regime-badge').textContent = `Regime ${data.regime}`;
+        // Header & Freshness
+        document.getElementById('last-updated').textContent = `Latest market data: ${data.data_freshness.latest_trading_date}`;
+        if (data.data_freshness.is_stale) {
+            document.getElementById('stale-warning').classList.remove('hidden');
+        }
+        document.getElementById('regime-badge').textContent = `Regime ${data.regime !== 'Mixed / Transition' ? data.regime : 'Mixed'}`;
 
-        // Regime Card
-        document.getElementById('regime-name').textContent = data.regime_name;
-        document.getElementById('regime-summary').textContent = data.summary;
+        // Regime Card Logic
+        const isMixed = data.regime === "Mixed / Transition";
+        document.getElementById('regime-name').textContent = isMixed ? "Mixed / Transition" : `${data.regime} — ${data.regime_name}`;
+        
+        let closestText = `Closest Profile: ${data.closest_regime.code} (${data.closest_regime.name}) | Confidence: ${data.confidence}`;
+        document.getElementById('closest-regime').textContent = closestText;
+
+        // Divergences
+        if (data.divergence_warnings && data.divergence_warnings.length > 0) {
+            const divSec = document.getElementById('divergences-section');
+            const divList = document.getElementById('divergences-list');
+            data.divergence_warnings.forEach(w => {
+                const li = document.createElement('li');
+                li.textContent = w.message;
+                divList.appendChild(li);
+            });
+            divSec.classList.remove('hidden');
+        }
 
         // Scores
         const scores = ['demand', 'bottleneck', 'substitution', 'stress', 'breadth'];
         scores.forEach(s => {
             const el = document.getElementById(`score-${s}`);
             el.textContent = data.scores[s];
-            if (data.scores[s] >= 60) el.style.color = 'var(--success)';
-            if (data.scores[s] < 40) el.style.color = 'var(--danger)';
+            if (data.scores[s] >= 60) el.style.color = s === 'stress' ? 'var(--danger)' : 'var(--success)';
+            if (data.scores[s] < 40) el.style.color = s === 'stress' ? 'var(--success)' : 'var(--danger)';
         });
 
         // Ratios Table
@@ -42,32 +60,35 @@ document.addEventListener('DOMContentLoaded', async () => {
             wSec.classList.remove('hidden');
         }
 
-        // 2D Regime Map (Chart.js)
-        const ctx = document.getElementById('regimeChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'scatter',
-            data: {
-                datasets: [{
-                    label: 'Current Market State',
-                    data: [{ x: data.scores.demand, y: data.scores.bottleneck }],
-                    backgroundColor: '#2563eb',
-                    pointRadius: (data.scores.stress / 5) + 5 // Bubble size based on stress
-                }]
-            },
-            options: {
-                scales: {
-                    x: { title: { display: true, text: 'Demand Score (0-100)' }, min: 0, max: 100 },
-                    y: { title: { display: true, text: 'Bottleneck Score (0-100)' }, min: 0, max: 100 }
-                },
-                plugins: {
-                    tooltip: {
-                        callbacks: {
-                            label: (ctx) => `Demand: ${ctx.raw.x}, Bottleneck: ${ctx.raw.y} (Size = Stress)`
-                        }
-                    }
-                }
+        // Fetch History & Render Chart
+        fetch('data/history.json').then(res => res.json()).then(histData => {
+            if (!histData || histData.length < 3) {
+                document.getElementById('history-warning').classList.remove('hidden');
+                return;
             }
-        });
+
+            const dates = histData.map(d => d.date);
+            const ctx = document.getElementById('historyChart').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [
+                        { label: 'Demand', data: histData.map(d => d.scores.demand), borderColor: '#2563eb', tension: 0.2 },
+                        { label: 'Bottleneck', data: histData.map(d => d.scores.bottleneck), borderColor: '#7c3aed', tension: 0.2 },
+                        { label: 'Rotation', data: histData.map(d => d.scores.substitution), borderColor: '#059669', tension: 0.2 },
+                        { label: 'Stress', data: histData.map(d => d.scores.stress), borderColor: '#dc2626', tension: 0.2 },
+                        { label: 'Breadth', data: histData.map(d => d.scores.breadth), borderColor: '#d97706', tension: 0.2 }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: { y: { min: 0, max: 100 } },
+                    plugins: { legend: { position: 'bottom', labels: { boxWidth: 12 } } }
+                }
+            });
+        }).catch(err => console.log("No history data yet.", err));
 
     } catch (error) {
         document.getElementById('regime-name').textContent = "Error loading data.";
