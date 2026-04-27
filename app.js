@@ -69,8 +69,41 @@ document.addEventListener('DOMContentLoaded', async () => {
             );
         }
 
-        if (data.market_read && document.getElementById('market-read')) {
-            safeText('market-read', data.market_read);
+        // Market Read Fallback Logic
+        const marketReadText = data.market_read || data.summary || "No plain-English market interpretation is available for this run.";
+        safeText('market-read', marketReadText);
+
+        // Plain English Interpretation
+        if (data.interpretation) {
+            safeText('interp-plain', data.interpretation.plain_english);
+            
+            const whyList = document.getElementById('interp-why');
+            if (whyList) {
+                whyList.innerHTML = '';
+                data.interpretation.why.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    whyList.appendChild(li);
+                });
+            }
+
+            const watchList = document.getElementById('interp-watch');
+            if (watchList) {
+                watchList.innerHTML = '';
+                data.interpretation.watch_next.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    watchList.appendChild(li);
+                });
+            }
+
+            safeText('interp-investor', data.interpretation.investor_reading);
+        } else {
+            const whyList = document.getElementById('interp-why');
+            if (whyList) whyList.innerHTML = "<li>Not generated in this run.</li>";
+            const watchList = document.getElementById('interp-watch');
+            if (watchList) watchList.innerHTML = "<li>Not generated in this run.</li>";
+            safeText('interp-investor', "Interpretation not available.");
         }
 
         // Key Divergences
