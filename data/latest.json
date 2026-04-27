@@ -1,0 +1,21 @@
+{
+  "date": "2026-04-24",
+  "last_updated_utc": "2026-04-27T07:13:06.590108+00:00",
+  "regime": "Mixed / Transition",
+  "regime_name": "Transitioning Regime",
+  "summary": "Market signals are mixed. Waiting for clearer trend alignment across demand, bottleneck, and stress metrics.",
+  "scores": {
+    "demand": 52.3,
+    "bottleneck": 60.4,
+    "substitution": 100,
+    "stress": 0,
+    "breadth": 100.0
+  },
+  "key_ratios": {
+    "NVDA_QQQ_20D": 5.92,
+    "TSM_SMH_20D": -9.57,
+    "AVGO_NVDA_20D": 15.01,
+    "HYG_LQD_20D": 0.46
+  },
+  "warnings": []
+}
