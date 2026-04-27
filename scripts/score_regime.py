@@ -42,6 +42,11 @@ def normalize(val, scale=None):
     score = 50 + (val / clip_val) * 50
     return max(0, min(100, score))
 
+def normalize_rotation_soft(val, scale=0.30):
+    # Soft tanh function prevents hard pegging to 100 unless extreme
+    score = 50 + 48 * np.tanh(val / scale)
+    return max(0, min(100, score))
+
 # 1. Demand Score
 demand_20 = get_basket_return(tickers['demand'], 20) - get_return('QQQ', 20)
 demand_60 = get_basket_return(tickers['demand'], 60) - get_return('QQQ', 60)
@@ -54,11 +59,21 @@ bot_60 = get_basket_return(tickers['bottleneck'], 60) - get_return('SMH', 60)
 bot_120 = get_basket_return(tickers['bottleneck'], 120) - get_return('SMH', 120)
 bottleneck_score = normalize((bot_20 * 0.4) + (bot_60 * 0.4) + (bot_120 * 0.2))
 
-# 3. Substitution (ASIC / Networking Rotation) Score - Softened Normalization
+# 3. Substitution (ASIC / Networking Rotation) Score - Soft Tanh Normalization
 sub_20 = get_basket_return(['AVGO', 'MRVL', 'ANET', 'CRDO'], 20) - get_return('NVDA', 20)
 sub_60 = get_basket_return(['AVGO', 'MRVL', 'ANET', 'CRDO'], 60) - get_return('NVDA', 60)
+rotation_raw = (sub_20 * 0.5) + (sub_60 * 0.5)
 rotation_clip = weights.get('rotation_normalization', {}).get('max_return_clip', 0.30)
-substitution_score = normalize((sub_20 * 0.5) + (sub_60 * 0.5), scale=rotation_clip)
+substitution_score = normalize_rotation_soft(rotation_raw, scale=rotation_clip)
+
+rotation_details = {
+    "sub_20_raw_pct": round(sub_20 * 100, 2),
+    "sub_60_raw_pct": round(sub_60 * 100, 2),
+    "weighted_raw_pct": round(rotation_raw * 100, 2),
+    "normalization_method": "tanh_soft_clip",
+    "rotation_basket": ["AVGO", "MRVL", "ANET", "CRDO"],
+    "benchmark": "NVDA"
+}
 
 # 4. Composite Stress Score
 stress_underperf = get_basket_return(tickers['stress'], 20) - get_return('QQQ', 20)
@@ -260,6 +275,7 @@ output = {
         "stress": round(stress_score, 1),
         "breadth": round(breadth_score, 1)
     },
+    "rotation_details": rotation_details,
     "breadth_details": {
         "valid_tickers": valid_tickers,
         "conditions_true": conditions_true,
