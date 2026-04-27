@@ -16,14 +16,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         let closestText = `Closest Profile: ${data.closest_regime.code} (${data.closest_regime.name}) | Confidence: ${data.confidence}`;
         document.getElementById('closest-regime').textContent = closestText;
+        
+        if(data.market_read) {
+            document.getElementById('market-read').textContent = data.market_read;
+        }
 
-        // Divergences
+        // Divergences with Severity Badges
         if (data.divergence_warnings && data.divergence_warnings.length > 0) {
             const divSec = document.getElementById('divergences-section');
             const divList = document.getElementById('divergences-list');
             data.divergence_warnings.forEach(w => {
                 const li = document.createElement('li');
-                li.textContent = w.message;
+                const badge = document.createElement('span');
+                badge.className = `severity-badge sev-${w.severity}`;
+                badge.textContent = w.severity;
+                li.appendChild(badge);
+                li.appendChild(document.createTextNode(w.message));
                 divList.appendChild(li);
             });
             divSec.classList.remove('hidden');
@@ -42,9 +50,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('dh-source').textContent = dh.source;
         document.getElementById('dh-date').textContent = dh.latest_trading_date;
         
-        // Format UTC date nicely
+        // Explicitly format as UTC
         const utcDate = new Date(dh.last_updated_utc);
-        document.getElementById('dh-updated').textContent = isNaN(utcDate) ? dh.last_updated_utc : utcDate.toLocaleString();
+        document.getElementById('dh-updated').textContent = isNaN(utcDate) 
+            ? dh.last_updated_utc 
+            : utcDate.toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
         
         document.getElementById('dh-retrieval').textContent = `${dh.retrieved_tickers} / ${dh.expected_tickers} (${dh.retrieval_success_pct}%)`;
         
@@ -71,17 +81,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (data.scores[s] < 40) el.style.color = s === 'stress' ? 'var(--success)' : 'var(--danger)';
         });
 
-        // Regime Matrix Render
+        // Regime Matrix Render (with Annotations plugin for lines)
+        Chart.register(window['chartjs-plugin-annotation']);
         const ctxMatrix = document.getElementById('regimeMatrixChart').getContext('2d');
         const dScore = data.scores.demand;
         const bScore = data.scores.bottleneck;
         const sScore = data.scores.stress;
         const rScore = data.scores.substitution;
 
-        // Bubble Radius mapping based on Stress (min 5, max 20)
         const radius = (sScore / 100) * 15 + 5; 
-        
-        // Color Opacity mapping based on Rotation (min 0.2, max 1.0)
         const rotationAlpha = 0.2 + (rScore / 100) * 0.8;
 
         new Chart(ctxMatrix, {
@@ -104,16 +112,22 @@ document.addEventListener('DOMContentLoaded', async () => {
                 plugins: {
                     tooltip: {
                         callbacks: {
-                            label: (ctx) => {
-                                return [
-                                    `Demand: ${dScore}`,
-                                    `Bottleneck: ${bScore}`,
-                                    `Stress: ${sScore} (Bubble Size)`,
-                                    `Rotation: ${rScore} (Opacity)`,
-                                    `Regime: ${data.regime !== 'Mixed / Transition' ? data.regime : 'Mixed'}`,
-                                    `Closest Profile: ${data.closest_regime.code}`
-                                ];
-                            }
+                            label: (ctx) => [
+                                `Demand: ${dScore}`,
+                                `Bottleneck: ${bScore}`,
+                                `Stress: ${sScore} (Bubble Size)`,
+                                `Rotation: ${rScore} (Opacity)`,
+                                `Regime: ${data.regime !== 'Mixed / Transition' ? data.regime : 'Mixed'}`,
+                                `Closest Profile: ${data.closest_regime.code}`
+                            ]
+                        }
+                    },
+                    annotation: {
+                        annotations: {
+                            line1: { type: 'line', xMin: 60, xMax: 60, borderColor: 'rgba(0,0,0,0.25)', borderWidth: 1 },
+                            line2: { type: 'line', yMin: 60, yMax: 60, borderColor: 'rgba(0,0,0,0.25)', borderWidth: 1 },
+                            line3: { type: 'line', xMin: 40, xMax: 40, borderColor: 'rgba(0,0,0,0.1)', borderDash: [5, 5], borderWidth: 1 },
+                            line4: { type: 'line', yMin: 40, yMax: 40, borderColor: 'rgba(0,0,0,0.1)', borderDash: [5, 5], borderWidth: 1 }
                         }
                     }
                 }
