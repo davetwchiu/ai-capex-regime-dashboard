@@ -13,7 +13,8 @@
             <h1>AI CAPEX Regime Dashboard</h1>
             <p>Market-implied monitor of AI hardware bottlenecks, ROI confidence, substitution, and CAPEX stress.</p>
             <div class="meta-info">
-                <span id="last-updated">Loading...</span>
+                <span id="last-updated">Latest market data: Loading...</span>
+                <span id="stale-warning" class="badge danger hidden">Data Stale</span>
                 <span id="regime-badge" class="badge">--</span>
             </div>
         </div>
@@ -22,7 +23,12 @@
     <main class="container">
         <section class="card regime-card">
             <h2 id="regime-name">Analyzing Market Data...</h2>
-            <p id="regime-summary">Please wait while the latest market inferences are loaded.</p>
+            <p id="closest-regime" class="closest-regime-text"></p>
+        </section>
+
+        <section id="divergences-section" class="divergences hidden">
+            <h4>Key Divergences</h4>
+            <ul id="divergences-list"></ul>
         </section>
 
         <section class="scores-grid">
@@ -37,26 +43,27 @@
                 <p class="score-desc">AI Hardware vs SMH</p>
             </div>
             <div class="score-card">
-                <h3>Substitution</h3>
+                <h3>ASIC / Networking Rotation</h3>
                 <div class="score-value" id="score-substitution">--</div>
-                <p class="score-desc">ASIC/Net vs NVDA</p>
+                <p class="score-desc">ASIC/Networking vs NVDA</p>
             </div>
             <div class="score-card">
                 <h3>Stress Score</h3>
                 <div class="score-value" id="score-stress">--</div>
-                <p class="score-desc">Infra Underperformance</p>
+                <p class="score-desc">Drawdown / Credit / Infra Underperf.</p>
             </div>
             <div class="score-card">
                 <h3>Breadth Score</h3>
                 <div class="score-value" id="score-breadth">--</div>
-                <p class="score-desc">% Above 20D MA</p>
+                <p class="score-desc">Composite: 20D MA, 50D MA, vs Benchmarks</p>
             </div>
         </section>
 
         <div class="two-col">
             <section class="card chart-container">
-                <h3>Regime Map (Demand vs Bottleneck)</h3>
-                <canvas id="regimeChart"></canvas>
+                <h3>Regime History (Scores over time)</h3>
+                <canvas id="historyChart"></canvas>
+                <p id="history-warning" class="hidden">Regime history will appear after several daily updates.</p>
             </section>
             
             <section class="card">
@@ -74,6 +81,13 @@
         <section id="warnings-section" class="warnings hidden">
             <h4>System Warnings</h4>
             <ul id="warnings-list"></ul>
+        </section>
+
+        <section class="methodology card">
+            <h3>Methodology & Limitations</h3>
+            <p><strong>ASIC / Networking Rotation:</strong> This score does not prove GPU demand is falling. It measures whether the market is rotating toward ASIC, networking, and scale-out infrastructure relative to pure NVIDIA GPU beta.</p>
+            <p><strong>Breadth & Stress:</strong> Composite metrics measuring underlying market participation and high-beta drawdowns respectively.</p>
+            <p><em>Note: This is a market-implied tool measuring relative momentum, not fundamental truth. It is not standalone investment advice.</em></p>
         </section>
     </main>
     <script src="app.js"></script>
