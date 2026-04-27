@@ -1,6 +1,20 @@
 {
   "date": "2026-04-24",
-  "last_updated_utc": "2026-04-27T07:30:58.780975+00:00",
+  "last_updated_utc": "2026-04-27T07:48:36.348052+00:00",
+  "data_health": {
+    "status": "OK",
+    "source": "yfinance",
+    "retrieved_tickers": 34,
+    "expected_tickers": 34,
+    "retrieval_success_pct": 100.0,
+    "failed_tickers": [],
+    "core_tickers_ok": true,
+    "core_missing_tickers": [],
+    "latest_trading_date": "2026-04-24",
+    "last_updated_utc": "2026-04-27T07:48:36.348052+00:00",
+    "is_stale": false,
+    "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
+  },
   "data_freshness": {
     "latest_trading_date": "2026-04-24",
     "calendar_age_days": 3,
