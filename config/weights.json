@@ -6,7 +6,8 @@
   },
   "normalization": {
     "max_return_clip": 0.15,
-    "min_return_clip": -0.15
+    "min_return_clip": -0.15,
+    "rotation_clip": 0.25
   },
   "thresholds": {
     "high": 60,
