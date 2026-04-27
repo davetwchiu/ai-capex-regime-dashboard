@@ -80,6 +80,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (data.scores[s] >= 60) el.style.color = s === 'stress' ? 'var(--danger)' : 'var(--success)';
             if (data.scores[s] < 40) el.style.color = s === 'stress' ? 'var(--success)' : 'var(--danger)';
         });
+        
+        // Populate Rotation Diagnostics (Raw numbers)
+        if (data.rotation_details) {
+            const rd = data.rotation_details;
+            const diagEl = document.getElementById('rotation-diagnostic');
+            if (diagEl) {
+                diagEl.textContent = `Raw: 20D ${rd.sub_20_raw_pct}%, 60D ${rd.sub_60_raw_pct}%, wgt ${rd.weighted_raw_pct}%`;
+            }
+        }
 
         // Regime Matrix Render (with Annotations plugin for lines)
         Chart.register(window['chartjs-plugin-annotation']);
@@ -136,7 +145,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Third Axis Readings Helper
         const getLabel = (val) => val >= 60 ? "High" : (val <= 40 ? "Low" : "Neutral");
-        const getRotationLabel = (val) => val >= 85 ? "Extreme" : (val >= 60 ? "High" : (val <= 40 ? "Low" : "Neutral"));
+        const getRotationLabel = (val) => val >= 80 ? "Extreme" : (val >= 60 ? "High" : (val <= 40 ? "Low" : "Neutral"));
         const getBreadthLabel = (val) => val >= 60 ? "Healthy" : (val <= 40 ? "Weak" : "Neutral");
 
         document.getElementById('ta-stress').textContent = getLabel(sScore);
