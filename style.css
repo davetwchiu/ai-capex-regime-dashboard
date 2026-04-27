@@ -47,10 +47,17 @@ header p { margin: 0 0 15px 0; color: var(--text-muted); }
 
 .regime-card h2 { margin-top: 0; color: var(--primary); margin-bottom: 5px; }
 .closest-regime-text { font-size: 16px; font-weight: 500; color: var(--text-muted); margin-top: 0;}
+.market-read-text { font-size: 14px; color: var(--text-main); background: #f3f4f6; padding: 12px; border-left: 4px solid var(--primary); margin-top: 15px; border-radius: 0 4px 4px 0;}
 
 .divergences { background: #fffbeb; border: 1px solid #fde68a; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
 .divergences h4 { margin: 0 0 10px 0; color: var(--warning); }
-.divergences ul { margin: 0; padding-left: 20px; color: #92400e; }
+.divergences-list { margin: 0; padding-left: 0; color: #92400e; list-style-type: none; }
+.divergences-list li { margin-bottom: 10px; line-height: 1.4; }
+
+.severity-badge { font-size: 10px; padding: 3px 6px; border-radius: 4px; margin-right: 8px; font-weight: bold; text-transform: uppercase; vertical-align: middle; }
+.sev-low { background-color: #f3f4f6; color: #4b5563; border: 1px solid #d1d5db; }
+.sev-medium { background-color: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+.sev-high { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
 
 .data-health-card h3 { margin-top: 0; display: flex; align-items: center; gap: 10px; font-size: 18px; }
 .dh-message { margin-bottom: 15px; color: var(--text-muted); font-size: 14px; }
