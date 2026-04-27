@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const data = await response.json();
 
         // Header & Freshness
-        document.getElementById('last-updated').textContent = `Latest market data: ${data.data_freshness.latest_trading_date}`;
-        if (data.data_freshness.is_stale) {
+        document.getElementById('last-updated').textContent = `Latest market data: ${data.data_health.latest_trading_date}`;
+        if (data.data_health.is_stale) {
             document.getElementById('stale-warning').classList.remove('hidden');
         }
         document.getElementById('regime-badge').textContent = `Regime ${data.regime !== 'Mixed / Transition' ? data.regime : 'Mixed'}`;
@@ -29,6 +29,39 @@ document.addEventListener('DOMContentLoaded', async () => {
             divSec.classList.remove('hidden');
         }
 
+        // Data Health
+        const dh = data.data_health;
+        const statusBadge = document.getElementById('dh-status');
+        statusBadge.textContent = dh.status;
+        statusBadge.className = 'badge'; // reset
+        if (dh.status === 'OK') statusBadge.classList.add('success');
+        else if (dh.status === 'Partial') statusBadge.classList.add('warning');
+        else statusBadge.classList.add('danger');
+
+        document.getElementById('dh-message').textContent = dh.message;
+        document.getElementById('dh-source').textContent = dh.source;
+        document.getElementById('dh-date').textContent = dh.latest_trading_date;
+        
+        // Format UTC date nicely
+        const utcDate = new Date(dh.last_updated_utc);
+        document.getElementById('dh-updated').textContent = isNaN(utcDate) ? dh.last_updated_utc : utcDate.toLocaleString();
+        
+        document.getElementById('dh-retrieval').textContent = `${dh.retrieved_tickers} / ${dh.expected_tickers} (${dh.retrieval_success_pct}%)`;
+        
+        const coreSpan = document.getElementById('dh-core');
+        if (dh.core_tickers_ok) {
+            coreSpan.textContent = "OK";
+            coreSpan.style.color = "var(--success)";
+        } else {
+            coreSpan.textContent = `Missing (${dh.core_missing_tickers.join(', ')})`;
+            coreSpan.style.color = "var(--danger)";
+        }
+
+        if (dh.failed_tickers && dh.failed_tickers.length > 0) {
+            document.getElementById('dh-failed-container').classList.remove('hidden');
+            document.getElementById('dh-failed').textContent = dh.failed_tickers.join(', ');
+        }
+
         // Scores
         const scores = ['demand', 'bottleneck', 'substitution', 'stress', 'breadth'];
         scores.forEach(s => {
@@ -37,6 +70,65 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (data.scores[s] >= 60) el.style.color = s === 'stress' ? 'var(--danger)' : 'var(--success)';
             if (data.scores[s] < 40) el.style.color = s === 'stress' ? 'var(--success)' : 'var(--danger)';
         });
+
+        // Regime Matrix Render
+        const ctxMatrix = document.getElementById('regimeMatrixChart').getContext('2d');
+        const dScore = data.scores.demand;
+        const bScore = data.scores.bottleneck;
+        const sScore = data.scores.stress;
+        const rScore = data.scores.substitution;
+
+        // Bubble Radius mapping based on Stress (min 5, max 20)
+        const radius = (sScore / 100) * 15 + 5; 
+        
+        // Color Opacity mapping based on Rotation (min 0.2, max 1.0)
+        const rotationAlpha = 0.2 + (rScore / 100) * 0.8;
+
+        new Chart(ctxMatrix, {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Current Setup',
+                    data: [{ x: dScore, y: bScore, r: radius }],
+                    backgroundColor: `rgba(37, 99, 235, ${rotationAlpha})`,
+                    borderColor: '#1d4ed8',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { min: 0, max: 100, title: { display: true, text: 'Demand Score' } },
+                    y: { min: 0, max: 100, title: { display: true, text: 'Bottleneck Score' } }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                return [
+                                    `Demand: ${dScore}`,
+                                    `Bottleneck: ${bScore}`,
+                                    `Stress: ${sScore} (Bubble Size)`,
+                                    `Rotation: ${rScore} (Opacity)`,
+                                    `Regime: ${data.regime !== 'Mixed / Transition' ? data.regime : 'Mixed'}`,
+                                    `Closest Profile: ${data.closest_regime.code}`
+                                ];
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Third Axis Readings Helper
+        const getLabel = (val) => val >= 60 ? "High" : (val <= 40 ? "Low" : "Neutral");
+        const getRotationLabel = (val) => val >= 85 ? "Extreme" : (val >= 60 ? "High" : (val <= 40 ? "Low" : "Neutral"));
+        const getBreadthLabel = (val) => val >= 60 ? "Healthy" : (val <= 40 ? "Weak" : "Neutral");
+
+        document.getElementById('ta-stress').textContent = getLabel(sScore);
+        document.getElementById('ta-rotation').textContent = getRotationLabel(rScore);
+        document.getElementById('ta-breadth').textContent = getBreadthLabel(data.scores.breadth);
+        document.getElementById('ta-closest').textContent = `${data.closest_regime.code} (${data.confidence})`;
 
         // Ratios Table
         const tbody = document.querySelector('#ratios-table tbody');
@@ -48,18 +140,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             tbody.appendChild(tr);
         }
 
-        // Warnings
-        if (data.warnings && data.warnings.length > 0) {
-            const wSec = document.getElementById('warnings-section');
-            const wList = document.getElementById('warnings-list');
-            data.warnings.forEach(w => {
-                const li = document.createElement('li');
-                li.textContent = `${w.ticker}: ${w.issue}`;
-                wList.appendChild(li);
-            });
-            wSec.classList.remove('hidden');
-        }
-
         // Fetch History & Render Chart
         fetch('data/history.json').then(res => res.json()).then(histData => {
             if (!histData || histData.length < 3) {
@@ -68,9 +148,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             const dates = histData.map(d => d.date);
-            const ctx = document.getElementById('historyChart').getContext('2d');
+            const ctxHistory = document.getElementById('historyChart').getContext('2d');
             
-            new Chart(ctx, {
+            new Chart(ctxHistory, {
                 type: 'line',
                 data: {
                     labels: dates,
