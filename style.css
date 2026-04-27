@@ -6,6 +6,7 @@
     --border: #e5e7eb;
     --primary: #2563eb;
     --danger: #dc2626;
+    --warning: #d97706;
     --success: #16a34a;
 }
 
@@ -31,6 +32,8 @@ header p { margin: 0 0 15px 0; color: var(--text-muted); }
 
 .meta-info { display: flex; gap: 15px; align-items: center; font-size: 14px; font-weight: 500; }
 .badge { padding: 4px 10px; background: var(--primary); color: white; border-radius: 12px; }
+.badge.danger { background: var(--danger); }
+.hidden { display: none !important; }
 
 .card {
     background: var(--card-bg);
@@ -40,7 +43,18 @@ header p { margin: 0 0 15px 0; color: var(--text-muted); }
     margin-bottom: 20px;
 }
 
-.regime-card h2 { margin-top: 0; color: var(--primary); }
+.regime-card h2 { margin-top: 0; color: var(--primary); margin-bottom: 5px; }
+.closest-regime-text { font-size: 16px; font-weight: 500; color: var(--text-muted); margin-top: 0;}
+
+.divergences {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.divergences h4 { margin: 0 0 10px 0; color: var(--warning); }
+.divergences ul { margin: 0; padding-left: 20px; color: #92400e; }
 
 .scores-grid {
     display: grid;
@@ -59,7 +73,7 @@ header p { margin: 0 0 15px 0; color: var(--text-muted); }
 
 .score-card h3 { font-size: 14px; margin: 0 0 10px 0; color: var(--text-muted); }
 .score-value { font-size: 32px; font-weight: bold; }
-.score-desc { font-size: 12px; color: var(--text-muted); margin: 5px 0 0 0; }
+.score-desc { font-size: 11px; color: var(--text-muted); margin: 5px 0 0 0; }
 
 .two-col {
     display: grid;
@@ -74,6 +88,8 @@ th { color: var(--text-muted); font-weight: normal; }
 .positive { color: var(--success); font-weight: 500; }
 .negative { color: var(--danger); font-weight: 500; }
 
+.methodology h3 { font-size: 16px; margin-top:0; }
+.methodology p { font-size: 13px; color: var(--text-muted); margin-bottom: 8px;}
+
 .warnings { background: #fee2e2; border: 1px solid #fca5a5; padding: 15px; border-radius: 8px; margin-top: 20px;}
-.warnings.hidden { display: none; }
 .warnings h4 { margin: 0 0 10px 0; color: var(--danger); }
