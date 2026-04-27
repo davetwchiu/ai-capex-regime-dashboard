@@ -7,7 +7,7 @@
       "code": "B",
       "name": "Bottleneck Easing, ROI Holding"
     },
-    "confidence": "High",
+    "confidence": "Medium",
     "scores": {
       "demand": 52.3,
       "bottleneck": 60.4,

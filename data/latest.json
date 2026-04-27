@@ -1,6 +1,7 @@
 {
   "date": "2026-04-24",
-  "last_updated_utc": "2026-04-27T07:48:36.348052+00:00",
+  "last_updated_utc": "2026-04-27T08:20:31.446946+00:00",
+  "market_read": "AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
     "source": "yfinance",
@@ -11,7 +12,7 @@
     "core_tickers_ok": true,
     "core_missing_tickers": [],
     "latest_trading_date": "2026-04-24",
-    "last_updated_utc": "2026-04-27T07:48:36.348052+00:00",
+    "last_updated_utc": "2026-04-27T08:20:31.446946+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
@@ -26,14 +27,16 @@
     "code": "B",
     "name": "Bottleneck Easing, ROI Holding"
   },
-  "confidence": "High",
+  "confidence": "Medium",
   "divergence_warnings": [
     {
       "type": "TSM_Underperformance",
+      "severity": "medium",
       "message": "TSM is underperforming SMH over 20D, suggesting foundry leadership is not confirming broader semiconductor strength."
     },
     {
       "type": "High_Rotation",
+      "severity": "high",
       "message": "ASIC/networking rotation is very strong versus NVDA. Market may be shifting to custom silicon/scale-out."
     }
   ],
