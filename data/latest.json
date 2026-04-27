@@ -1,6 +1,6 @@
 {
   "date": "2026-04-24",
-  "last_updated_utc": "2026-04-27T08:20:31.446946+00:00",
+  "last_updated_utc": "2026-04-27T08:38:48.863083+00:00",
   "market_read": "AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
@@ -12,7 +12,7 @@
     "core_tickers_ok": true,
     "core_missing_tickers": [],
     "latest_trading_date": "2026-04-24",
-    "last_updated_utc": "2026-04-27T08:20:31.446946+00:00",
+    "last_updated_utc": "2026-04-27T08:38:48.863083+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
@@ -36,16 +36,29 @@
     },
     {
       "type": "High_Rotation",
-      "severity": "high",
+      "severity": "medium",
       "message": "ASIC/networking rotation is very strong versus NVDA. Market may be shifting to custom silicon/scale-out."
     }
   ],
   "scores": {
     "demand": 52.3,
     "bottleneck": 60.4,
-    "substitution": 100,
+    "substitution": 91.9,
     "stress": 18.7,
     "breadth": 81.2
+  },
+  "rotation_details": {
+    "sub_20_raw_pct": 41.26,
+    "sub_60_raw_pct": 39.24,
+    "weighted_raw_pct": 40.25,
+    "normalization_method": "tanh_soft_clip",
+    "rotation_basket": [
+      "AVGO",
+      "MRVL",
+      "ANET",
+      "CRDO"
+    ],
+    "benchmark": "NVDA"
   },
   "breadth_details": {
     "valid_tickers": 28,
