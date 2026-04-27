@@ -54,10 +54,10 @@ bot_60 = get_basket_return(tickers['bottleneck'], 60) - get_return('SMH', 60)
 bot_120 = get_basket_return(tickers['bottleneck'], 120) - get_return('SMH', 120)
 bottleneck_score = normalize((bot_20 * 0.4) + (bot_60 * 0.4) + (bot_120 * 0.2))
 
-# 3. Substitution (ASIC / Networking Rotation) Score (using wider clip)
+# 3. Substitution (ASIC / Networking Rotation) Score - Softened Normalization
 sub_20 = get_basket_return(['AVGO', 'MRVL', 'ANET', 'CRDO'], 20) - get_return('NVDA', 20)
 sub_60 = get_basket_return(['AVGO', 'MRVL', 'ANET', 'CRDO'], 60) - get_return('NVDA', 60)
-rotation_clip = weights['normalization'].get('rotation_clip', 0.25)
+rotation_clip = weights.get('rotation_normalization', {}).get('max_return_clip', 0.30)
 substitution_score = normalize((sub_20 * 0.5) + (sub_60 * 0.5), scale=rotation_clip)
 
 # 4. Composite Stress Score
@@ -112,25 +112,8 @@ for t in universe:
 conditions_total = valid_tickers * 4
 breadth_score = (conditions_true / conditions_total) * 100 if conditions_total > 0 else 50
 
-# --- Vector / Distance based Regime Mapping ---
-scores_arr = np.array([demand_score, bottleneck_score, substitution_score, stress_score, breadth_score])
-distances = []
 
-for code, vec in weights['target_vectors'].items():
-    vec_arr = np.array([vec['demand'], vec['bottleneck'], vec['substitution'], vec['stress'], vec['breadth']])
-    dist = np.linalg.norm(scores_arr - vec_arr)
-    distances.append((code, vec['name'], dist))
-
-distances.sort(key=lambda x: x[2])
-closest = distances[0]
-second_closest = distances[1]
-
-ratio = closest[2] / second_closest[2] if second_closest[2] > 0 else 0
-if ratio <= 0.75: confidence = "High"
-elif ratio <= 0.90: confidence = "Medium"
-else: confidence = "Low"
-
-# Hard Threshold checking
+# Hard Threshold checking for true regime
 h, l = weights['thresholds']['high'], weights['thresholds']['low']
 regime = "Mixed / Transition"
 regime_name = "Transitioning Regime"
@@ -144,21 +127,69 @@ elif bottleneck_score >= h and demand_score < h and stress_score >= h:
 elif demand_score < l and bottleneck_score < l and stress_score >= h:
     regime, regime_name = "D", weights['target_vectors']['D']['name']
 
+# --- Vector / Distance based Regime Mapping & Confidence ---
+scores_arr = np.array([demand_score, bottleneck_score, substitution_score, stress_score, breadth_score])
+distances = []
+
+for code, vec in weights['target_vectors'].items():
+    vec_arr = np.array([vec['demand'], vec['bottleneck'], vec['substitution'], vec['stress'], vec['breadth']])
+    dist = np.linalg.norm(scores_arr - vec_arr)
+    distances.append((code, vec['name'], dist))
+
+distances.sort(key=lambda x: x[2])
+closest = distances[0]
+second_closest = distances[1]
+
+ratio = closest[2] / second_closest[2] if second_closest[2] > 0 else 0
+
+if regime == "Mixed / Transition":
+    if ratio <= 0.55: confidence = "High"
+    elif ratio <= 0.85: confidence = "Medium"
+    else: confidence = "Low"
+else:
+    if ratio <= 0.65: confidence = "High"
+    elif ratio <= 0.85: confidence = "Medium"
+    else: confidence = "Low"
+
+
+# --- Rule-Based Market Read ---
+mr_parts = []
+if breadth_score >= 60 and stress_score < 50 and substitution_score >= 70:
+    mr_parts.append("AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta.")
+elif demand_score < 50 and bottleneck_score >= 60:
+    mr_parts.append("Hardware scarcity remains supported, but platform demand confirmation is weakening.")
+elif demand_score < 40 and bottleneck_score < 40 and stress_score >= 60:
+    mr_parts.append("Market is pricing rising CAPEX bubble concern with broad weakness and high stress.")
+elif demand_score >= 60 and bottleneck_score >= 60:
+    mr_parts.append("Market is pricing a healthy AI CAPEX expansion with strong platform demand and tight hardware bottlenecks.")
+else:
+    mr_parts.append("Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence.")
+
+tsm_vs_smh = get_return('TSM', 20) - smh_20d
+if tsm_vs_smh < -0.05:
+    mr_parts.append("TSM underperformance weakens foundry confirmation.")
+
+market_read = " ".join(mr_parts)
+
+
 # --- Divergence Warnings ---
 divergences = []
 nvda_vs_qqq = get_return('NVDA', 20) - qqq_20d
-tsm_vs_smh = get_return('TSM', 20) - smh_20d
 
 if nvda_vs_qqq > 0.05 and demand_score < 50:
-    divergences.append({"type": "NVDA_Demand_Divergence", "message": "NVIDIA is outperforming QQQ, but demand/platform confirmation is weak."})
+    sev = "high" if nvda_vs_qqq > 0.10 else "medium"
+    divergences.append({"type": "NVDA_Demand_Divergence", "severity": sev, "message": "NVIDIA is outperforming QQQ, but demand/platform confirmation is weak."})
 if tsm_vs_smh < -0.05:
-    divergences.append({"type": "TSM_Underperformance", "message": "TSM is underperforming SMH over 20D, suggesting foundry leadership is not confirming broader semiconductor strength."})
+    sev = "high" if tsm_vs_smh < -0.10 else "medium"
+    divergences.append({"type": "TSM_Underperformance", "severity": sev, "message": "TSM is underperforming SMH over 20D, suggesting foundry leadership is not confirming broader semiconductor strength."})
 if substitution_score > 85:
-    divergences.append({"type": "High_Rotation", "message": "ASIC/networking rotation is very strong versus NVDA. Market may be shifting to custom silicon/scale-out."})
+    sev = "high" if substitution_score > 95 else "medium"
+    divergences.append({"type": "High_Rotation", "severity": sev, "message": "ASIC/networking rotation is very strong versus NVDA. Market may be shifting to custom silicon/scale-out."})
 if bottleneck_score > 60 and stress_score > 60:
-    divergences.append({"type": "Late_Cycle_Squeeze", "message": "Hardware bottleneck stocks remain strong while stress is rising. This can resemble a late-cycle squeeze."})
+    divergences.append({"type": "Late_Cycle_Squeeze", "severity": "high", "message": "Hardware bottleneck stocks remain strong while stress is rising. This can resemble a late-cycle squeeze."})
 if bottleneck_score > 60 and breadth_score < 45:
-    divergences.append({"type": "Narrow_Leadership", "message": "Bottleneck strength is narrow. Fewer AI-chain stocks are confirming the move."})
+    sev = "high" if breadth_score < 35 else "medium"
+    divergences.append({"type": "Narrow_Leadership", "severity": sev, "message": "Bottleneck strength is narrow. Fewer AI-chain stocks are confirming the move."})
 
 # --- Data Health Logic ---
 now = datetime.now(timezone.utc)
@@ -207,6 +238,7 @@ data_health = {
 output = {
     "date": latest_date,
     "last_updated_utc": now.isoformat(),
+    "market_read": market_read,
     "data_health": data_health,
     "data_freshness": {
         "latest_trading_date": latest_date,
@@ -301,4 +333,4 @@ with open(csv_file, 'w', newline='') as f:
     writer.writeheader()
     writer.writerows(csv_rows)
 
-print(f"Update complete. Date: {latest_date} | Health: {status} | Closest: {closest[0]}")
+print(f"Update complete. Date: {latest_date} | Health: {status} | Closest: {closest[0]} | Conf: {confidence}")
