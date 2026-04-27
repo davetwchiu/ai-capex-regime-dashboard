@@ -17,6 +17,7 @@ all_tickers = list(all_tickers)
 os.makedirs('data', exist_ok=True)
 warnings = []
 price_data = []
+failed_tickers = []
 
 print(f"Fetching data for {len(all_tickers)} tickers...")
 
@@ -25,6 +26,7 @@ for ticker in all_tickers:
         data = yf.Ticker(ticker).history(period="1y")
         if data.empty:
             warnings.append({"ticker": ticker, "issue": "No data returned"})
+            failed_tickers.append(ticker)
             continue
             
         data.reset_index(inplace=True)
@@ -37,11 +39,21 @@ for ticker in all_tickers:
             })
     except Exception as e:
         warnings.append({"ticker": ticker, "issue": str(e)})
+        failed_tickers.append(ticker)
 
 df = pd.DataFrame(price_data)
 df.to_csv('data/raw_prices.csv', index=False)
 
 with open('data/warnings.json', 'w') as f:
     json.dump(warnings, f)
+
+# Save explicit retrieval stats for today's run
+retrieval_stats = {
+    "expected_tickers": len(all_tickers),
+    "retrieved_tickers": len(all_tickers) - len(failed_tickers),
+    "failed_tickers": failed_tickers
+}
+with open('data/retrieval_stats.json', 'w') as f:
+    json.dump(retrieval_stats, f)
 
 print("Market data collection complete.")
