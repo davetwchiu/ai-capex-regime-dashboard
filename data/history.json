@@ -134,5 +134,22 @@
       "stress": 6.5,
       "breadth": 70.5
     }
+  },
+  {
+    "date": "2026-05-06",
+    "regime": "Mixed / Transition",
+    "regime_name": "Transitioning Regime",
+    "closest_regime": {
+      "code": "B",
+      "name": "Bottleneck Easing, ROI Holding"
+    },
+    "confidence": "High",
+    "scores": {
+      "demand": 50.7,
+      "bottleneck": 40.2,
+      "substitution": 87.9,
+      "stress": 6.9,
+      "breadth": 66.1
+    }
   }
 ]
