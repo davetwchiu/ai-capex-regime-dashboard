@@ -1,6 +1,6 @@
 {
-  "date": "2026-05-08",
-  "last_updated_utc": "2026-05-09T00:14:52.383233+00:00",
+  "date": "2026-05-11",
+  "last_updated_utc": "2026-05-12T01:15:22.938651+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-05-08",
-    "last_updated_utc": "2026-05-09T00:14:52.383233+00:00",
+    "latest_trading_date": "2026-05-11",
+    "last_updated_utc": "2026-05-12T01:15:22.938651+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-05-08",
+    "latest_trading_date": "2026-05-11",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -51,17 +51,17 @@
     }
   ],
   "scores": {
-    "demand": 44.1,
-    "bottleneck": 34.8,
-    "substitution": 79.9,
-    "stress": 21.6,
-    "breadth": 53.6
+    "demand": 34.4,
+    "bottleneck": 30.4,
+    "substitution": 80.2,
+    "stress": 18.4,
+    "breadth": 55.4
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -2.31,
-    "TSM_SMH_20D": -18.59,
-    "AVGO_NVDA_20D": 1.65,
-    "HYG_LQD_20D": 0.36
+    "NVDA_QQQ_20D": 0.38,
+    "TSM_SMH_20D": -20.53,
+    "AVGO_NVDA_20D": -3.1,
+    "HYG_LQD_20D": 0.41
   },
   "warnings": []
 }
