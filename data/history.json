@@ -304,5 +304,22 @@
       "stress": 52.3,
       "breadth": 37.5
     }
+  },
+  {
+    "date": "2026-05-20",
+    "regime": "Mixed / Transition",
+    "regime_name": "Transitioning Regime",
+    "closest_regime": {
+      "code": "D",
+      "name": "CAPEX Bubble Fear"
+    },
+    "confidence": "Low",
+    "scores": {
+      "demand": 32.5,
+      "bottleneck": 38.3,
+      "substitution": 71.5,
+      "stress": 52.0,
+      "breadth": 47.3
+    }
   }
 ]

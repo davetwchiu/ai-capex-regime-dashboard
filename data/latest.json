@@ -1,6 +1,6 @@
 {
-  "date": "2026-05-19",
-  "last_updated_utc": "2026-05-20T01:29:35.081835+00:00",
+  "date": "2026-05-20",
+  "last_updated_utc": "2026-05-21T01:30:19.596273+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-05-19",
-    "last_updated_utc": "2026-05-20T01:29:35.081835+00:00",
+    "latest_trading_date": "2026-05-20",
+    "last_updated_utc": "2026-05-21T01:30:19.596273+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-05-19",
+    "latest_trading_date": "2026-05-20",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -27,7 +27,7 @@
     "code": "D",
     "name": "CAPEX Bubble Fear"
   },
-  "confidence": "Medium",
+  "confidence": "Low",
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is D. This means the model does not see a clean regime break, but the current pattern most resembles CAPEX Bubble Fear. The market is pricing rising AI CAPEX bubble concern: demand confirmation is weak, bottleneck leadership is fading, stress is high, and breadth is poor.",
     "why": [
@@ -49,17 +49,17 @@
     }
   ],
   "scores": {
-    "demand": 35.6,
-    "bottleneck": 37.9,
-    "substitution": 67.1,
-    "stress": 52.3,
-    "breadth": 37.5
+    "demand": 32.5,
+    "bottleneck": 38.3,
+    "substitution": 71.5,
+    "stress": 52.0,
+    "breadth": 47.3
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 1.49,
-    "TSM_SMH_20D": -10.4,
-    "AVGO_NVDA_20D": -8.16,
-    "HYG_LQD_20D": 1.14
+    "NVDA_QQQ_20D": 1.5,
+    "TSM_SMH_20D": -14.76,
+    "AVGO_NVDA_20D": -11.51,
+    "HYG_LQD_20D": 1.04
   },
   "warnings": []
 }
