@@ -1,6 +1,6 @@
 {
-  "date": "2026-05-20",
-  "last_updated_utc": "2026-05-21T01:30:19.596273+00:00",
+  "date": "2026-05-21",
+  "last_updated_utc": "2026-05-22T01:27:26.040123+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
@@ -11,35 +11,37 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-05-20",
-    "last_updated_utc": "2026-05-21T01:30:19.596273+00:00",
+    "latest_trading_date": "2026-05-21",
+    "last_updated_utc": "2026-05-22T01:27:26.040123+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-05-20",
+    "latest_trading_date": "2026-05-21",
     "calendar_age_days": 1,
     "is_stale": false
   },
   "regime": "Mixed / Transition",
   "regime_name": "Transitioning Regime",
   "closest_regime": {
-    "code": "D",
-    "name": "CAPEX Bubble Fear"
+    "code": "B",
+    "name": "Bottleneck Easing, ROI Holding"
   },
-  "confidence": "Low",
+  "confidence": "High",
   "interpretation": {
-    "plain_english": "The hard regime is mixed, but the closest profile is D. This means the model does not see a clean regime break, but the current pattern most resembles CAPEX Bubble Fear. The market is pricing rising AI CAPEX bubble concern: demand confirmation is weak, bottleneck leadership is fading, stress is high, and breadth is poor.",
+    "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure.",
     "why": [
-      "Demand Score is weak, suggesting lack of confidence in platform ROI.",
-      "Bottleneck leadership is fading against broader benchmarks.",
-      "Breadth is poor, indicating very narrow participation across the AI chain."
+      "ASIC / Networking Rotation is elevated (76), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
+      "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure.",
+      "TSM is underperforming SMH, so foundry leadership is not confirming the broader semiconductor move."
     ],
     "watch_next": [
-      "Watch for any recovery in Breadth or Demand as early signs of stabilization.",
-      "Watch Credit spreads (HYG/LQD) to see if AI stress is bleeding into broader macro liquidity."
+      "If Demand Score rises above 60 while Stress stays low, the regime shifts toward a broad, confirmed bull phase (A).",
+      "If Rotation stays very high but Demand fails to improve, ASIC/networking may become a crowded sub-theme rather than a broad AI confirmation.",
+      "If Stress rises above 60 while Bottleneck remains high, watch for a shift toward Hardware Late-Cycle Squeeze (C).",
+      "If TSM continues to underperform SMH, foundry confirmation remains a key missing link."
     ],
-    "investor_reading": "The market is punishing high-beta AI infrastructure and long-duration hardware stories. Balance-sheet quality, cash-flow durability, and defensive positioning matter more in this regime."
+    "investor_reading": "The market appears to be rewarding ASIC, networking, and scale-out infrastructure exposure more than pure GPU beta. That does not mean NVIDIA demand is collapsing; it suggests leadership may be broadening or rotating within the AI infrastructure chain."
   },
   "divergence_warnings": [
     {
@@ -49,17 +51,17 @@
     }
   ],
   "scores": {
-    "demand": 32.5,
-    "bottleneck": 38.3,
-    "substitution": 71.5,
-    "stress": 52.0,
-    "breadth": 47.3
+    "demand": 36.2,
+    "bottleneck": 44.5,
+    "substitution": 75.9,
+    "stress": 20.8,
+    "breadth": 52.7
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 1.5,
-    "TSM_SMH_20D": -14.76,
-    "AVGO_NVDA_20D": -11.51,
-    "HYG_LQD_20D": 1.04
+    "NVDA_QQQ_20D": 0.27,
+    "TSM_SMH_20D": -11.45,
+    "AVGO_NVDA_20D": -11.23,
+    "HYG_LQD_20D": 0.78
   },
   "warnings": []
 }
