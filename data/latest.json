@@ -1,6 +1,6 @@
 {
-  "date": "2026-05-21",
-  "last_updated_utc": "2026-05-22T01:27:26.040123+00:00",
+  "date": "2026-05-22",
+  "last_updated_utc": "2026-05-23T01:21:26.922998+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-05-21",
-    "last_updated_utc": "2026-05-22T01:27:26.040123+00:00",
+    "latest_trading_date": "2026-05-22",
+    "last_updated_utc": "2026-05-23T01:21:26.922998+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-05-21",
+    "latest_trading_date": "2026-05-22",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -31,7 +31,7 @@
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure.",
     "why": [
-      "ASIC / Networking Rotation is elevated (76), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
+      "ASIC / Networking Rotation is elevated (85), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
       "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure.",
       "TSM is underperforming SMH, so foundry leadership is not confirming the broader semiconductor move."
     ],
@@ -48,20 +48,25 @@
       "type": "TSM_Underperformance",
       "severity": "high",
       "message": "TSM is underperforming SMH over 20D, suggesting foundry leadership is not confirming broader semiconductor strength."
+    },
+    {
+      "type": "High_Rotation",
+      "severity": "medium",
+      "message": "ASIC/networking rotation is very strong versus NVDA. Market may be shifting to custom silicon/scale-out."
     }
   ],
   "scores": {
-    "demand": 36.2,
-    "bottleneck": 44.5,
-    "substitution": 75.9,
-    "stress": 20.8,
-    "breadth": 52.7
+    "demand": 34.2,
+    "bottleneck": 44.8,
+    "substitution": 85.0,
+    "stress": 18.7,
+    "breadth": 58.0
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 0.27,
-    "TSM_SMH_20D": -11.45,
-    "AVGO_NVDA_20D": -11.23,
-    "HYG_LQD_20D": 0.78
+    "NVDA_QQQ_20D": -4.69,
+    "TSM_SMH_20D": -13.29,
+    "AVGO_NVDA_20D": -5.43,
+    "HYG_LQD_20D": 0.55
   },
   "warnings": []
 }
