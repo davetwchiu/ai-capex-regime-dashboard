@@ -1,9 +1,9 @@
 {
   "date": "2026-05-22",
-  "last_updated_utc": "2026-05-23T01:21:26.922998+00:00",
+  "last_updated_utc": "2026-05-26T01:24:13.371558+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. TSM underperformance weakens foundry confirmation.",
   "data_health": {
-    "status": "OK",
+    "status": "Stale",
     "source": "yfinance",
     "retrieved_tickers": 34,
     "expected_tickers": 34,
@@ -12,14 +12,14 @@
     "core_tickers_ok": true,
     "core_missing_tickers": [],
     "latest_trading_date": "2026-05-22",
-    "last_updated_utc": "2026-05-23T01:21:26.922998+00:00",
-    "is_stale": false,
-    "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
+    "last_updated_utc": "2026-05-26T01:24:13.371558+00:00",
+    "is_stale": true,
+    "message": "Data retrieval Stale. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
     "latest_trading_date": "2026-05-22",
-    "calendar_age_days": 1,
-    "is_stale": false
+    "calendar_age_days": 4,
+    "is_stale": true
   },
   "regime": "Mixed / Transition",
   "regime_name": "Transitioning Regime",
