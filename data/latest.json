@@ -1,9 +1,9 @@
 {
-  "date": "2026-05-22",
-  "last_updated_utc": "2026-05-26T01:24:13.371558+00:00",
-  "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. TSM underperformance weakens foundry confirmation.",
+  "date": "2026-05-26",
+  "last_updated_utc": "2026-05-27T01:31:44.000665+00:00",
+  "market_read": "AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta. TSM underperformance weakens foundry confirmation.",
   "data_health": {
-    "status": "Stale",
+    "status": "OK",
     "source": "yfinance",
     "retrieved_tickers": 34,
     "expected_tickers": 34,
@@ -11,15 +11,15 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-05-22",
-    "last_updated_utc": "2026-05-26T01:24:13.371558+00:00",
-    "is_stale": true,
-    "message": "Data retrieval Stale. 34 of 34 tickers retrieved. Core tickers available."
+    "latest_trading_date": "2026-05-26",
+    "last_updated_utc": "2026-05-27T01:31:44.000665+00:00",
+    "is_stale": false,
+    "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-05-22",
-    "calendar_age_days": 4,
-    "is_stale": true
+    "latest_trading_date": "2026-05-26",
+    "calendar_age_days": 1,
+    "is_stale": false
   },
   "regime": "Mixed / Transition",
   "regime_name": "Transitioning Regime",
@@ -31,8 +31,9 @@
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure.",
     "why": [
-      "ASIC / Networking Rotation is elevated (85), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
+      "ASIC / Networking Rotation is elevated (89), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
       "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure.",
+      "Breadth is healthy, so the move is not limited to one or two AI stocks.",
       "TSM is underperforming SMH, so foundry leadership is not confirming the broader semiconductor move."
     ],
     "watch_next": [
@@ -56,17 +57,17 @@
     }
   ],
   "scores": {
-    "demand": 34.2,
-    "bottleneck": 44.8,
-    "substitution": 85.0,
-    "stress": 18.7,
-    "breadth": 58.0
+    "demand": 30.7,
+    "bottleneck": 48.9,
+    "substitution": 88.7,
+    "stress": 22.4,
+    "breadth": 61.6
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -4.69,
-    "TSM_SMH_20D": -13.29,
-    "AVGO_NVDA_20D": -5.43,
-    "HYG_LQD_20D": 0.55
+    "NVDA_QQQ_20D": -10.75,
+    "TSM_SMH_20D": -17.13,
+    "AVGO_NVDA_20D": 1.72,
+    "HYG_LQD_20D": 0.19
   },
   "warnings": []
 }
