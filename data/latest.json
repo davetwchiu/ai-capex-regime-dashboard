@@ -1,6 +1,6 @@
 {
-  "date": "2026-05-26",
-  "last_updated_utc": "2026-05-27T01:31:44.000665+00:00",
+  "date": "2026-05-27",
+  "last_updated_utc": "2026-05-28T01:20:45.875132+00:00",
   "market_read": "AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-05-26",
-    "last_updated_utc": "2026-05-27T01:31:44.000665+00:00",
+    "latest_trading_date": "2026-05-27",
+    "last_updated_utc": "2026-05-28T01:20:45.875132+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-05-26",
+    "latest_trading_date": "2026-05-27",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -27,11 +27,11 @@
     "code": "B",
     "name": "Bottleneck Easing, ROI Holding"
   },
-  "confidence": "High",
+  "confidence": "Medium",
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure.",
     "why": [
-      "ASIC / Networking Rotation is elevated (89), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
+      "ASIC / Networking Rotation is elevated (90), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
       "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure.",
       "Breadth is healthy, so the move is not limited to one or two AI stocks.",
       "TSM is underperforming SMH, so foundry leadership is not confirming the broader semiconductor move."
@@ -57,17 +57,17 @@
     }
   ],
   "scores": {
-    "demand": 30.7,
-    "bottleneck": 48.9,
-    "substitution": 88.7,
-    "stress": 22.4,
+    "demand": 35.0,
+    "bottleneck": 53.0,
+    "substitution": 90.0,
+    "stress": 19.0,
     "breadth": 61.6
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -10.75,
-    "TSM_SMH_20D": -17.13,
-    "AVGO_NVDA_20D": 1.72,
-    "HYG_LQD_20D": 0.19
+    "NVDA_QQQ_20D": -11.2,
+    "TSM_SMH_20D": -13.49,
+    "AVGO_NVDA_20D": 5.78,
+    "HYG_LQD_20D": 0.17
   },
   "warnings": []
 }
