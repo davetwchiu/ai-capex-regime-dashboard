@@ -1,6 +1,6 @@
 {
-  "date": "2026-05-29",
-  "last_updated_utc": "2026-05-30T01:25:01.470398+00:00",
+  "date": "2026-06-01",
+  "last_updated_utc": "2026-06-02T01:42:48.221542+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-05-29",
-    "last_updated_utc": "2026-05-30T01:25:01.470398+00:00",
+    "latest_trading_date": "2026-06-01",
+    "last_updated_utc": "2026-06-02T01:42:48.221542+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-05-29",
+    "latest_trading_date": "2026-06-01",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -31,7 +31,7 @@
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure.",
     "why": [
-      "ASIC / Networking Rotation is elevated (92), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
+      "ASIC / Networking Rotation is elevated (89), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
       "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure.",
       "TSM is underperforming SMH, so foundry leadership is not confirming the broader semiconductor move."
     ],
@@ -46,7 +46,7 @@
   "divergence_warnings": [
     {
       "type": "TSM_Underperformance",
-      "severity": "high",
+      "severity": "medium",
       "message": "TSM is underperforming SMH over 20D, suggesting foundry leadership is not confirming broader semiconductor strength."
     },
     {
@@ -56,17 +56,17 @@
     }
   ],
   "scores": {
-    "demand": 45.2,
-    "bottleneck": 61.7,
-    "substitution": 92.1,
-    "stress": 18.0,
+    "demand": 44.4,
+    "bottleneck": 74.1,
+    "substitution": 88.8,
+    "stress": 13.2,
     "breadth": 58.0
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -4.77,
-    "TSM_SMH_20D": -12.54,
-    "AVGO_NVDA_20D": 1.23,
-    "HYG_LQD_20D": -0.43
+    "NVDA_QQQ_20D": 2.88,
+    "TSM_SMH_20D": -9.67,
+    "AVGO_NVDA_20D": -3.87,
+    "HYG_LQD_20D": -0.45
   },
   "warnings": []
 }
