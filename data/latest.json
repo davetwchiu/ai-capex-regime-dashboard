@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-02",
-  "last_updated_utc": "2026-06-03T02:04:02.020164+00:00",
+  "date": "2026-06-03",
+  "last_updated_utc": "2026-06-04T02:02:09.857072+00:00",
   "market_read": "AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-06-02",
-    "last_updated_utc": "2026-06-03T02:04:02.020164+00:00",
+    "latest_trading_date": "2026-06-03",
+    "last_updated_utc": "2026-06-04T02:02:09.857072+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-06-02",
+    "latest_trading_date": "2026-06-03",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -27,7 +27,7 @@
     "code": "B",
     "name": "Bottleneck Easing, ROI Holding"
   },
-  "confidence": "Low",
+  "confidence": "Medium",
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure.",
     "why": [
@@ -57,17 +57,17 @@
     }
   ],
   "scores": {
-    "demand": 37.8,
-    "bottleneck": 86.4,
-    "substitution": 94.2,
-    "stress": 15.6,
-    "breadth": 65.2
+    "demand": 33.0,
+    "bottleneck": 85.8,
+    "substitution": 93.9,
+    "stress": 38.1,
+    "breadth": 63.4
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 1.37,
-    "TSM_SMH_20D": -13.52,
-    "AVGO_NVDA_20D": 3.36,
-    "HYG_LQD_20D": -0.36
+    "NVDA_QQQ_20D": 0.1,
+    "TSM_SMH_20D": -11.32,
+    "AVGO_NVDA_20D": 2.85,
+    "HYG_LQD_20D": -0.14
   },
   "warnings": []
 }
