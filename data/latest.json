@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-04",
-  "last_updated_utc": "2026-06-05T01:34:45.188136+00:00",
+  "date": "2026-06-05",
+  "last_updated_utc": "2026-06-06T01:27:01.739999+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
@@ -11,37 +11,35 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-06-04",
-    "last_updated_utc": "2026-06-05T01:34:45.188136+00:00",
+    "latest_trading_date": "2026-06-05",
+    "last_updated_utc": "2026-06-06T01:27:01.739999+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-06-04",
+    "latest_trading_date": "2026-06-05",
     "calendar_age_days": 1,
     "is_stale": false
   },
-  "regime": "Mixed / Transition",
-  "regime_name": "Transitioning Regime",
+  "regime": "C",
+  "regime_name": "Hardware Late-Cycle Squeeze",
   "closest_regime": {
-    "code": "B",
-    "name": "Bottleneck Easing, ROI Holding"
+    "code": "C",
+    "name": "Hardware Late-Cycle Squeeze"
   },
   "confidence": "Low",
   "interpretation": {
-    "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure.",
+    "plain_english": "The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising.",
     "why": [
-      "ASIC / Networking Rotation is elevated (94), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
-      "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure.",
-      "TSM is underperforming SMH, so foundry leadership is not confirming the broader semiconductor move."
+      "Bottleneck Score is high, meaning hardware scarcity is still being rewarded.",
+      "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.",
+      "Stress is rising/high, showing strain in high-beta AI infrastructure or credit proxies."
     ],
     "watch_next": [
-      "If Demand Score rises above 60 while Stress stays low, the regime shifts toward a broad, confirmed bull phase (A).",
-      "If Rotation stays very high but Demand fails to improve, ASIC/networking may become a crowded sub-theme rather than a broad AI confirmation.",
-      "If Stress rises above 60 while Bottleneck remains high, watch for a shift toward Hardware Late-Cycle Squeeze (C).",
-      "If TSM continues to underperform SMH, foundry confirmation remains a key missing link."
+      "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
+      "If Stress continues to spike, the market may transition from a 'squeeze' into outright CAPEX Bubble Fear (D)."
     ],
-    "investor_reading": "The market appears to be rewarding ASIC, networking, and scale-out infrastructure exposure more than pure GPU beta. That does not mean NVIDIA demand is collapsing; it suggests leadership may be broadening or rotating within the AI infrastructure chain."
+    "investor_reading": "Hardware names may still look strong, but risk is rising because customer-side ROI confirmation is less clear. This environment typically warrants caution and a preference for quality over highly levered beta."
   },
   "divergence_warnings": [
     {
@@ -53,20 +51,25 @@
       "type": "High_Rotation",
       "severity": "medium",
       "message": "ASIC/networking rotation is very strong versus NVDA. Market may be shifting to custom silicon/scale-out."
+    },
+    {
+      "type": "Late_Cycle_Squeeze",
+      "severity": "high",
+      "message": "Hardware bottleneck stocks remain strong while stress is rising. This can resemble a late-cycle squeeze."
     }
   ],
   "scores": {
-    "demand": 40.6,
-    "bottleneck": 85.7,
-    "substitution": 94.3,
-    "stress": 50.4,
-    "breadth": 58.0
+    "demand": 40.8,
+    "bottleneck": 80.0,
+    "substitution": 92.7,
+    "stress": 60.5,
+    "breadth": 50.0
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -1.23,
-    "TSM_SMH_20D": -8.09,
-    "AVGO_NVDA_20D": -6.75,
-    "HYG_LQD_20D": 0.03
+    "NVDA_QQQ_20D": -4.37,
+    "TSM_SMH_20D": -5.23,
+    "AVGO_NVDA_20D": -3.59,
+    "HYG_LQD_20D": 0.12
   },
   "warnings": []
 }
