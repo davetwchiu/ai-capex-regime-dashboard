@@ -1,7 +1,7 @@
 {
-  "date": "2026-06-05",
-  "last_updated_utc": "2026-06-06T01:27:01.739999+00:00",
-  "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening. TSM underperformance weakens foundry confirmation.",
+  "date": "2026-06-08",
+  "last_updated_utc": "2026-06-09T01:25:54.034908+00:00",
+  "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening.",
   "data_health": {
     "status": "OK",
     "source": "yfinance",
@@ -11,29 +11,28 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-06-05",
-    "last_updated_utc": "2026-06-06T01:27:01.739999+00:00",
+    "latest_trading_date": "2026-06-08",
+    "last_updated_utc": "2026-06-09T01:25:54.034908+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-06-05",
+    "latest_trading_date": "2026-06-08",
     "calendar_age_days": 1,
     "is_stale": false
   },
-  "regime": "C",
-  "regime_name": "Hardware Late-Cycle Squeeze",
+  "regime": "Mixed / Transition",
+  "regime_name": "Transitioning Regime",
   "closest_regime": {
     "code": "C",
     "name": "Hardware Late-Cycle Squeeze"
   },
   "confidence": "Low",
   "interpretation": {
-    "plain_english": "The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising.",
+    "plain_english": "The hard regime is mixed, but the closest profile is C. This means the model does not see a clean regime break, but the current pattern most resembles Hardware Late-Cycle Squeeze. The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising.",
     "why": [
       "Bottleneck Score is high, meaning hardware scarcity is still being rewarded.",
-      "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.",
-      "Stress is rising/high, showing strain in high-beta AI infrastructure or credit proxies."
+      "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging."
     ],
     "watch_next": [
       "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
@@ -43,33 +42,23 @@
   },
   "divergence_warnings": [
     {
-      "type": "TSM_Underperformance",
-      "severity": "medium",
-      "message": "TSM is underperforming SMH over 20D, suggesting foundry leadership is not confirming broader semiconductor strength."
-    },
-    {
       "type": "High_Rotation",
       "severity": "medium",
       "message": "ASIC/networking rotation is very strong versus NVDA. Market may be shifting to custom silicon/scale-out."
-    },
-    {
-      "type": "Late_Cycle_Squeeze",
-      "severity": "high",
-      "message": "Hardware bottleneck stocks remain strong while stress is rising. This can resemble a late-cycle squeeze."
     }
   ],
   "scores": {
-    "demand": 40.8,
-    "bottleneck": 80.0,
-    "substitution": 92.7,
-    "stress": 60.5,
-    "breadth": 50.0
+    "demand": 37.0,
+    "bottleneck": 91.1,
+    "substitution": 94.9,
+    "stress": 50.0,
+    "breadth": 52.7
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -4.37,
-    "TSM_SMH_20D": -5.23,
-    "AVGO_NVDA_20D": -3.59,
-    "HYG_LQD_20D": 0.12
+    "NVDA_QQQ_20D": -3.62,
+    "TSM_SMH_20D": -1.91,
+    "AVGO_NVDA_20D": -4.83,
+    "HYG_LQD_20D": 0.43
   },
   "warnings": []
 }
