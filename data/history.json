@@ -542,5 +542,22 @@
       "stress": 55.8,
       "breadth": 47.3
     }
+  },
+  {
+    "date": "2026-06-10",
+    "regime": "Mixed / Transition",
+    "regime_name": "Transitioning Regime",
+    "closest_regime": {
+      "code": "C",
+      "name": "Hardware Late-Cycle Squeeze"
+    },
+    "confidence": "Medium",
+    "scores": {
+      "demand": 40.4,
+      "bottleneck": 88.2,
+      "substitution": 93.9,
+      "stress": 59.9,
+      "breadth": 42.0
+    }
   }
 ]
