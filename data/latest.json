@@ -1,7 +1,7 @@
 {
-  "date": "2026-06-11",
-  "last_updated_utc": "2026-06-12T01:42:04.136342+00:00",
-  "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening.",
+  "date": "2026-06-12",
+  "last_updated_utc": "2026-06-13T01:36:19.908699+00:00",
+  "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening. TSM underperformance weakens foundry confirmation.",
   "data_health": {
     "status": "OK",
     "source": "yfinance",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-06-11",
-    "last_updated_utc": "2026-06-12T01:42:04.136342+00:00",
+    "latest_trading_date": "2026-06-12",
+    "last_updated_utc": "2026-06-13T01:36:19.908699+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-06-11",
+    "latest_trading_date": "2026-06-12",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -43,6 +43,11 @@
   },
   "divergence_warnings": [
     {
+      "type": "TSM_Underperformance",
+      "severity": "medium",
+      "message": "TSM is underperforming SMH over 20D, suggesting foundry leadership is not confirming broader semiconductor strength."
+    },
+    {
       "type": "High_Rotation",
       "severity": "high",
       "message": "ASIC/networking rotation is very strong versus NVDA. Market may be shifting to custom silicon/scale-out."
@@ -59,17 +64,17 @@
     }
   ],
   "scores": {
-    "demand": 25.4,
-    "bottleneck": 100.0,
+    "demand": 22.1,
+    "bottleneck": 91.9,
     "substitution": 96.4,
-    "stress": 66.6,
-    "breadth": 41.1
+    "stress": 62.4,
+    "breadth": 43.8
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -9.51,
-    "TSM_SMH_20D": -0.89,
-    "AVGO_NVDA_20D": 1.69,
-    "HYG_LQD_20D": -0.25
+    "NVDA_QQQ_20D": -13.07,
+    "TSM_SMH_20D": -5.47,
+    "AVGO_NVDA_20D": -0.27,
+    "HYG_LQD_20D": -0.18
   },
   "warnings": []
 }
