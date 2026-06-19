@@ -1,7 +1,7 @@
 {
-  "date": "2026-06-17",
-  "last_updated_utc": "2026-06-18T01:59:28.909998+00:00",
-  "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening.",
+  "date": "2026-06-18",
+  "last_updated_utc": "2026-06-19T02:11:18.923180+00:00",
+  "market_read": "AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta.",
   "data_health": {
     "status": "OK",
     "source": "yfinance",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-06-17",
-    "last_updated_utc": "2026-06-18T01:59:28.909998+00:00",
+    "latest_trading_date": "2026-06-18",
+    "last_updated_utc": "2026-06-19T02:11:18.923180+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-06-17",
+    "latest_trading_date": "2026-06-18",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -31,8 +31,9 @@
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure.",
     "why": [
-      "ASIC / Networking Rotation is elevated (96), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
-      "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure."
+      "ASIC / Networking Rotation is elevated (97), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
+      "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure.",
+      "Breadth is healthy, so the move is not limited to one or two AI stocks."
     ],
     "watch_next": [
       "If Demand Score rises above 60 while Stress stays low, the regime shifts toward a broad, confirmed bull phase (A).",
@@ -49,17 +50,17 @@
     }
   ],
   "scores": {
-    "demand": 21.6,
-    "bottleneck": 99.0,
-    "substitution": 96.4,
-    "stress": 18.5,
-    "breadth": 58.0
+    "demand": 21.4,
+    "bottleneck": 99.8,
+    "substitution": 97.0,
+    "stress": 16.6,
+    "breadth": 61.6
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -10.12,
-    "TSM_SMH_20D": -4.38,
-    "AVGO_NVDA_20D": 2.71,
-    "HYG_LQD_20D": -0.93
+    "NVDA_QQQ_20D": -9.46,
+    "TSM_SMH_20D": -1.53,
+    "AVGO_NVDA_20D": 4.07,
+    "HYG_LQD_20D": -0.72
   },
   "warnings": []
 }
