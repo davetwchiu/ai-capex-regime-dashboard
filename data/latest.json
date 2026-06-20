@@ -1,6 +1,6 @@
 {
   "date": "2026-06-18",
-  "last_updated_utc": "2026-06-19T02:11:18.923180+00:00",
+  "last_updated_utc": "2026-06-20T01:34:43.365956+00:00",
   "market_read": "AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta.",
   "data_health": {
     "status": "OK",
@@ -12,13 +12,13 @@
     "core_tickers_ok": true,
     "core_missing_tickers": [],
     "latest_trading_date": "2026-06-18",
-    "last_updated_utc": "2026-06-19T02:11:18.923180+00:00",
+    "last_updated_utc": "2026-06-20T01:34:43.365956+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
     "latest_trading_date": "2026-06-18",
-    "calendar_age_days": 1,
+    "calendar_age_days": 2,
     "is_stale": false
   },
   "regime": "Mixed / Transition",
@@ -53,14 +53,14 @@
     "demand": 21.4,
     "bottleneck": 99.8,
     "substitution": 97.0,
-    "stress": 16.6,
+    "stress": 17.4,
     "breadth": 61.6
   },
   "key_ratios": {
     "NVDA_QQQ_20D": -9.46,
     "TSM_SMH_20D": -1.53,
     "AVGO_NVDA_20D": 4.07,
-    "HYG_LQD_20D": -0.72
+    "HYG_LQD_20D": -1.22
   },
   "warnings": []
 }
