@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-22",
-  "last_updated_utc": "2026-06-23T01:27:39.450890+00:00",
+  "date": "2026-06-23",
+  "last_updated_utc": "2026-06-24T01:22:05.152638+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening.",
   "data_health": {
     "status": "OK",
@@ -11,34 +11,35 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-06-22",
-    "last_updated_utc": "2026-06-23T01:27:39.450890+00:00",
+    "latest_trading_date": "2026-06-23",
+    "last_updated_utc": "2026-06-24T01:22:05.152638+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-06-22",
+    "latest_trading_date": "2026-06-23",
     "calendar_age_days": 1,
     "is_stale": false
   },
   "regime": "Mixed / Transition",
   "regime_name": "Transitioning Regime",
   "closest_regime": {
-    "code": "C",
-    "name": "Hardware Late-Cycle Squeeze"
+    "code": "B",
+    "name": "Bottleneck Easing, ROI Holding"
   },
   "confidence": "Low",
   "interpretation": {
-    "plain_english": "The hard regime is mixed, but the closest profile is C. This means the model does not see a clean regime break, but the current pattern most resembles Hardware Late-Cycle Squeeze. The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising.",
+    "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure.",
     "why": [
-      "Bottleneck Score is high, meaning hardware scarcity is still being rewarded.",
-      "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging."
+      "ASIC / Networking Rotation is elevated (96), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
+      "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure."
     ],
     "watch_next": [
-      "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
-      "If Stress continues to spike, the market may transition from a 'squeeze' into outright CAPEX Bubble Fear (D)."
+      "If Demand Score rises above 60 while Stress stays low, the regime shifts toward a broad, confirmed bull phase (A).",
+      "If Rotation stays very high but Demand fails to improve, ASIC/networking may become a crowded sub-theme rather than a broad AI confirmation.",
+      "If Stress rises above 60 while Bottleneck remains high, watch for a shift toward Hardware Late-Cycle Squeeze (C)."
     ],
-    "investor_reading": "Hardware names may still look strong, but risk is rising because customer-side ROI confirmation is less clear. This environment typically warrants caution and a preference for quality over highly levered beta."
+    "investor_reading": "The market appears to be rewarding ASIC, networking, and scale-out infrastructure exposure more than pure GPU beta. That does not mean NVIDIA demand is collapsing; it suggests leadership may be broadening or rotating within the AI infrastructure chain."
   },
   "divergence_warnings": [
     {
@@ -48,17 +49,17 @@
     }
   ],
   "scores": {
-    "demand": 13.0,
-    "bottleneck": 100.0,
-    "substitution": 96.9,
-    "stress": 35.2,
-    "breadth": 56.2
+    "demand": 19.8,
+    "bottleneck": 94.1,
+    "substitution": 95.7,
+    "stress": 31.4,
+    "breadth": 50.9
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -8.12,
-    "TSM_SMH_20D": -2.66,
-    "AVGO_NVDA_20D": -0.58,
-    "HYG_LQD_20D": -0.38
+    "NVDA_QQQ_20D": -6.56,
+    "TSM_SMH_20D": 0.2,
+    "AVGO_NVDA_20D": -1.07,
+    "HYG_LQD_20D": -0.42
   },
   "warnings": []
 }
