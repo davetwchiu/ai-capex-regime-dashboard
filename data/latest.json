@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-26",
-  "last_updated_utc": "2026-06-27T01:26:41.315679+00:00",
+  "date": "2026-06-29",
+  "last_updated_utc": "2026-06-30T01:29:04.670008+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-06-26",
-    "last_updated_utc": "2026-06-27T01:26:41.315679+00:00",
+    "latest_trading_date": "2026-06-29",
+    "last_updated_utc": "2026-06-30T01:29:04.670008+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-06-26",
+    "latest_trading_date": "2026-06-29",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -51,25 +51,20 @@
       "type": "Late_Cycle_Squeeze",
       "severity": "high",
       "message": "Hardware bottleneck stocks remain strong while stress is rising. This can resemble a late-cycle squeeze."
-    },
-    {
-      "type": "Narrow_Leadership",
-      "severity": "medium",
-      "message": "Bottleneck strength is narrow. Fewer AI-chain stocks are confirming the move."
     }
   ],
   "scores": {
-    "demand": 9.9,
+    "demand": 7.8,
     "bottleneck": 100.0,
-    "substitution": 94.5,
-    "stress": 66.8,
-    "breadth": 44.6
+    "substitution": 94.1,
+    "stress": 66.1,
+    "breadth": 49.1
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -6.19,
-    "TSM_SMH_20D": 0.04,
-    "AVGO_NVDA_20D": -4.26,
-    "HYG_LQD_20D": -0.59
+    "NVDA_QQQ_20D": -5.73,
+    "TSM_SMH_20D": 3.5,
+    "AVGO_NVDA_20D": -8.95,
+    "HYG_LQD_20D": -0.55
   },
   "warnings": []
 }
