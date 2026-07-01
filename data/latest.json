@@ -1,6 +1,6 @@
 {
-  "date": "2026-06-29",
-  "last_updated_utc": "2026-06-30T01:29:04.670008+00:00",
+  "date": "2026-06-30",
+  "last_updated_utc": "2026-07-01T01:36:43.886045+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-06-29",
-    "last_updated_utc": "2026-06-30T01:29:04.670008+00:00",
+    "latest_trading_date": "2026-06-30",
+    "last_updated_utc": "2026-07-01T01:36:43.886045+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-06-29",
+    "latest_trading_date": "2026-06-30",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -44,7 +44,7 @@
   "divergence_warnings": [
     {
       "type": "High_Rotation",
-      "severity": "medium",
+      "severity": "high",
       "message": "ASIC/networking rotation is very strong versus NVDA. Market may be shifting to custom silicon/scale-out."
     },
     {
@@ -54,17 +54,17 @@
     }
   ],
   "scores": {
-    "demand": 7.8,
+    "demand": 7.3,
     "bottleneck": 100.0,
-    "substitution": 94.1,
-    "stress": 66.1,
-    "breadth": 49.1
+    "substitution": 95.4,
+    "stress": 74.3,
+    "breadth": 52.7
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -5.73,
-    "TSM_SMH_20D": 3.5,
-    "AVGO_NVDA_20D": -8.95,
-    "HYG_LQD_20D": -0.55
+    "NVDA_QQQ_20D": -9.97,
+    "TSM_SMH_20D": 1.97,
+    "AVGO_NVDA_20D": -7.03,
+    "HYG_LQD_20D": 0.03
   },
   "warnings": []
 }
