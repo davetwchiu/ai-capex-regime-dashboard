@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-01",
-  "last_updated_utc": "2026-07-02T01:28:56.119078+00:00",
+  "date": "2026-07-02",
+  "last_updated_utc": "2026-07-03T01:07:47.414961+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-07-01",
-    "last_updated_utc": "2026-07-02T01:28:56.119078+00:00",
+    "latest_trading_date": "2026-07-02",
+    "last_updated_utc": "2026-07-03T01:07:47.414961+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-07-01",
+    "latest_trading_date": "2026-07-02",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -59,17 +59,17 @@
     }
   ],
   "scores": {
-    "demand": 17.0,
-    "bottleneck": 91.3,
-    "substitution": 92.2,
-    "stress": 90.9,
-    "breadth": 44.6
+    "demand": 23.5,
+    "bottleneck": 80.8,
+    "substitution": 86.4,
+    "stress": 92.3,
+    "breadth": 42.0
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -8.52,
-    "TSM_SMH_20D": 1.54,
-    "AVGO_NVDA_20D": -11.96,
-    "HYG_LQD_20D": 0.15
+    "NVDA_QQQ_20D": -5.03,
+    "TSM_SMH_20D": 6.8,
+    "AVGO_NVDA_20D": -15.5,
+    "HYG_LQD_20D": 0.13
   },
   "warnings": []
 }
