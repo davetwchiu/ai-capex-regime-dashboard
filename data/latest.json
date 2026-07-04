@@ -1,6 +1,6 @@
 {
   "date": "2026-07-02",
-  "last_updated_utc": "2026-07-03T01:07:47.414961+00:00",
+  "last_updated_utc": "2026-07-04T01:04:41.890030+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening.",
   "data_health": {
     "status": "OK",
@@ -12,13 +12,13 @@
     "core_tickers_ok": true,
     "core_missing_tickers": [],
     "latest_trading_date": "2026-07-02",
-    "last_updated_utc": "2026-07-03T01:07:47.414961+00:00",
+    "last_updated_utc": "2026-07-04T01:04:41.890030+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
     "latest_trading_date": "2026-07-02",
-    "calendar_age_days": 1,
+    "calendar_age_days": 2,
     "is_stale": false
   },
   "regime": "C",
