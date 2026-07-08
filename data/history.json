@@ -831,5 +831,22 @@
       "stress": 92.0,
       "breadth": 51.8
     }
+  },
+  {
+    "date": "2026-07-07",
+    "regime": "C",
+    "regime_name": "Hardware Late-Cycle Squeeze",
+    "closest_regime": {
+      "code": "C",
+      "name": "Hardware Late-Cycle Squeeze"
+    },
+    "confidence": "Low",
+    "scores": {
+      "demand": 25.2,
+      "bottleneck": 67.1,
+      "substitution": 86.4,
+      "stress": 91.3,
+      "breadth": 42.0
+    }
   }
 ]

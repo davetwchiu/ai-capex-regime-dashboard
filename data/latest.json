@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-06",
-  "last_updated_utc": "2026-07-07T01:13:03.968931+00:00",
+  "date": "2026-07-07",
+  "last_updated_utc": "2026-07-08T00:57:16.272373+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-07-06",
-    "last_updated_utc": "2026-07-07T01:13:03.968931+00:00",
+    "latest_trading_date": "2026-07-07",
+    "last_updated_utc": "2026-07-08T00:57:16.272373+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-07-06",
+    "latest_trading_date": "2026-07-07",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -27,7 +27,7 @@
     "code": "C",
     "name": "Hardware Late-Cycle Squeeze"
   },
-  "confidence": "Medium",
+  "confidence": "Low",
   "interpretation": {
     "plain_english": "The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising.",
     "why": [
@@ -51,20 +51,25 @@
       "type": "Late_Cycle_Squeeze",
       "severity": "high",
       "message": "Hardware bottleneck stocks remain strong while stress is rising. This can resemble a late-cycle squeeze."
+    },
+    {
+      "type": "Narrow_Leadership",
+      "severity": "medium",
+      "message": "Bottleneck strength is narrow. Fewer AI-chain stocks are confirming the move."
     }
   ],
   "scores": {
-    "demand": 21.6,
-    "bottleneck": 74.9,
-    "substitution": 90.3,
-    "stress": 92.0,
-    "breadth": 51.8
+    "demand": 25.2,
+    "bottleneck": 67.1,
+    "substitution": 86.4,
+    "stress": 91.3,
+    "breadth": 42.0
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -8.27,
-    "TSM_SMH_20D": 5.48,
-    "AVGO_NVDA_20D": -0.03,
-    "HYG_LQD_20D": 0.33
+    "NVDA_QQQ_20D": -4.71,
+    "TSM_SMH_20D": 2.37,
+    "AVGO_NVDA_20D": 0.26,
+    "HYG_LQD_20D": 0.8
   },
   "warnings": []
 }
