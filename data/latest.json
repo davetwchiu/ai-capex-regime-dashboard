@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-07",
-  "last_updated_utc": "2026-07-08T00:57:16.272373+00:00",
+  "date": "2026-07-08",
+  "last_updated_utc": "2026-07-09T01:07:20.440888+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-07-07",
-    "last_updated_utc": "2026-07-08T00:57:16.272373+00:00",
+    "latest_trading_date": "2026-07-08",
+    "last_updated_utc": "2026-07-09T01:07:20.440888+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-07-07",
+    "latest_trading_date": "2026-07-08",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -27,7 +27,7 @@
     "code": "C",
     "name": "Hardware Late-Cycle Squeeze"
   },
-  "confidence": "Low",
+  "confidence": "Medium",
   "interpretation": {
     "plain_english": "The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising.",
     "why": [
@@ -43,33 +43,23 @@
   },
   "divergence_warnings": [
     {
-      "type": "High_Rotation",
-      "severity": "medium",
-      "message": "ASIC/networking rotation is very strong versus NVDA. Market may be shifting to custom silicon/scale-out."
-    },
-    {
       "type": "Late_Cycle_Squeeze",
       "severity": "high",
       "message": "Hardware bottleneck stocks remain strong while stress is rising. This can resemble a late-cycle squeeze."
-    },
-    {
-      "type": "Narrow_Leadership",
-      "severity": "medium",
-      "message": "Bottleneck strength is narrow. Fewer AI-chain stocks are confirming the move."
     }
   ],
   "scores": {
-    "demand": 25.2,
-    "bottleneck": 67.1,
-    "substitution": 86.4,
-    "stress": 91.3,
-    "breadth": 42.0
+    "demand": 24.8,
+    "bottleneck": 67.9,
+    "substitution": 83.9,
+    "stress": 85.7,
+    "breadth": 50.9
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -4.71,
-    "TSM_SMH_20D": 2.37,
-    "AVGO_NVDA_20D": 0.26,
-    "HYG_LQD_20D": 0.8
+    "NVDA_QQQ_20D": -1.63,
+    "TSM_SMH_20D": 3.49,
+    "AVGO_NVDA_20D": 0.33,
+    "HYG_LQD_20D": 0.63
   },
   "warnings": []
 }
