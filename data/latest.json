@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-16",
-  "last_updated_utc": "2026-07-17T00:57:15.789733+00:00",
+  "date": "2026-07-17",
+  "last_updated_utc": "2026-07-18T00:14:01.704963+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-07-16",
-    "last_updated_utc": "2026-07-17T00:57:15.789733+00:00",
+    "latest_trading_date": "2026-07-17",
+    "last_updated_utc": "2026-07-18T00:14:01.704963+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-07-16",
+    "latest_trading_date": "2026-07-17",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -42,17 +42,17 @@
   },
   "divergence_warnings": [],
   "scores": {
-    "demand": 33.8,
-    "bottleneck": 58.1,
-    "substitution": 47.0,
-    "stress": 90.5,
-    "breadth": 35.7
+    "demand": 35.8,
+    "bottleneck": 58.0,
+    "substitution": 43.2,
+    "stress": 90.8,
+    "breadth": 33.0
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 3.17,
-    "TSM_SMH_20D": 3.86,
-    "AVGO_NVDA_20D": -0.44,
-    "HYG_LQD_20D": 1.31
+    "NVDA_QQQ_20D": 2.76,
+    "TSM_SMH_20D": 2.99,
+    "AVGO_NVDA_20D": -4.57,
+    "HYG_LQD_20D": 1.13
   },
   "warnings": []
 }
