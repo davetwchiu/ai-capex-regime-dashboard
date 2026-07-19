@@ -983,6 +983,8 @@
       "substitution": 43.2,
       "stress": 90.8,
       "breadth": 33.0
-    }
+    },
+    "core_confidence": "Medium",
+    "funding_confirmation_status": "PARTIAL"
   }
 ]

@@ -1,7 +1,7 @@
 {
   "date": "2026-07-17",
-  "last_updated_utc": "2026-07-18T00:14:01.704963+00:00",
-  "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence.",
+  "last_updated_utc": "2026-07-19T07:58:49.908597+00:00",
+  "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
     "source": "yfinance",
@@ -12,13 +12,13 @@
     "core_tickers_ok": true,
     "core_missing_tickers": [],
     "latest_trading_date": "2026-07-17",
-    "last_updated_utc": "2026-07-18T00:14:01.704963+00:00",
+    "last_updated_utc": "2026-07-19T07:58:49.908597+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
     "latest_trading_date": "2026-07-17",
-    "calendar_age_days": 1,
+    "calendar_age_days": 2,
     "is_stale": false
   },
   "regime": "Mixed / Transition",
@@ -29,18 +29,26 @@
   },
   "confidence": "Medium",
   "interpretation": {
-    "plain_english": "The hard regime is mixed, but the closest profile is C. This means the model does not see a clean regime break, but the current pattern most resembles Hardware Late-Cycle Squeeze. The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising.",
+    "plain_english": "The hard regime is mixed, but the closest profile is C. This means the model does not see a clean regime break, but the current pattern most resembles Hardware Late-Cycle Squeeze. The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "why": [
       "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.",
-      "Stress is rising/high, showing strain in high-beta AI infrastructure or credit proxies."
+      "Stress is rising/high, showing strain in high-beta AI infrastructure or credit proxies.",
+      "Funding confirmation is partial: hyperscaler score 43.0, neocloud score 77.0."
     ],
     "watch_next": [
       "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
-      "If Stress continues to spike, the market may transition from a 'squeeze' into outright CAPEX Bubble Fear (D)."
+      "If Stress continues to spike, the market may transition from a 'squeeze' into outright CAPEX Bubble Fear (D).",
+      "Watch whether hyperscaler funding stress moves above 51 and whether issuer-level credit spreads or FCF revisions confirm the market signal."
     ],
     "investor_reading": "Hardware names may still look strong, but risk is rising because customer-side ROI confirmation is less clear. This environment typically warrants caution and a preference for quality over highly levered beta."
   },
-  "divergence_warnings": [],
+  "divergence_warnings": [
+    {
+      "type": "Two_Speed_Funding_Stress",
+      "severity": "high",
+      "message": "Neocloud financing stress is elevated, while broad hyperscaler funding stress is not yet confirmed."
+    }
+  ],
   "scores": {
     "demand": 35.8,
     "bottleneck": 58.0,
@@ -54,5 +62,34 @@
     "AVGO_NVDA_20D": -4.57,
     "HYG_LQD_20D": 1.13
   },
-  "warnings": []
+  "warnings": [],
+  "core_confidence": "Medium",
+  "funding_confirmation": {
+    "status": "PARTIAL",
+    "core_confidence": "Medium",
+    "adjusted_confidence": "Medium",
+    "confidence_action": "unchanged",
+    "is_stale": false,
+    "age_days": 0.0,
+    "source_as_of": "2026-07-19T07:21:36+00:00",
+    "sync_status": "ok",
+    "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
+    "signals": {
+      "hyperscaler_funding_score": 43.0,
+      "hyperscaler_status": "WATCH",
+      "hyperscaler_coverage_ratio": 0.65,
+      "neocloud_financing_score": 77.0,
+      "neocloud_status": "CREDIT STRESS CONFIRMED",
+      "market_plumbing_score": 50.0,
+      "market_plumbing_status": "WATCH"
+    },
+    "warnings": [
+      {
+        "type": "Two_Speed_Funding_Stress",
+        "severity": "high",
+        "message": "Neocloud financing stress is elevated, while broad hyperscaler funding stress is not yet confirmed."
+      }
+    ],
+    "methodology": "Diagnostic overlay only; it does not alter Demand, Bottleneck, Rotation, Stress, Breadth, or the hard regime classification."
+  }
 }
