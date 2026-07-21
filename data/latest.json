@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-17",
-  "last_updated_utc": "2026-07-19T07:58:49.908597+00:00",
+  "date": "2026-07-20",
+  "last_updated_utc": "2026-07-21T00:56:27.941984+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,14 +11,14 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-07-17",
-    "last_updated_utc": "2026-07-19T07:58:49.908597+00:00",
+    "latest_trading_date": "2026-07-20",
+    "last_updated_utc": "2026-07-21T00:56:27.941984+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-07-17",
-    "calendar_age_days": 2,
+    "latest_trading_date": "2026-07-20",
+    "calendar_age_days": 1,
     "is_stale": false
   },
   "regime": "Mixed / Transition",
@@ -33,7 +33,7 @@
     "why": [
       "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.",
       "Stress is rising/high, showing strain in high-beta AI infrastructure or credit proxies.",
-      "Funding confirmation is partial: hyperscaler score 43.0, neocloud score 77.0."
+      "Funding confirmation is partial: hyperscaler score 45.0, neocloud score 76.0."
     ],
     "watch_next": [
       "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
@@ -50,17 +50,17 @@
     }
   ],
   "scores": {
-    "demand": 35.8,
-    "bottleneck": 58.0,
-    "substitution": 43.2,
-    "stress": 90.8,
-    "breadth": 33.0
+    "demand": 34.6,
+    "bottleneck": 56.1,
+    "substitution": 43.1,
+    "stress": 90.3,
+    "breadth": 34.8
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 2.76,
-    "TSM_SMH_20D": 2.99,
-    "AVGO_NVDA_20D": -4.57,
-    "HYG_LQD_20D": 1.13
+    "NVDA_QQQ_20D": 2.4,
+    "TSM_SMH_20D": 2.37,
+    "AVGO_NVDA_20D": -4.41,
+    "HYG_LQD_20D": 1.46
   },
   "warnings": [],
   "core_confidence": "Medium",
@@ -70,18 +70,18 @@
     "adjusted_confidence": "Medium",
     "confidence_action": "unchanged",
     "is_stale": false,
-    "age_days": 0.0,
-    "source_as_of": "2026-07-19T07:21:36+00:00",
+    "age_days": 0.2,
+    "source_as_of": "2026-07-20T21:16:50+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
-      "hyperscaler_funding_score": 43.0,
+      "hyperscaler_funding_score": 45.0,
       "hyperscaler_status": "WATCH",
       "hyperscaler_coverage_ratio": 0.65,
-      "neocloud_financing_score": 77.0,
+      "neocloud_financing_score": 76.0,
       "neocloud_status": "CREDIT STRESS CONFIRMED",
-      "market_plumbing_score": 50.0,
-      "market_plumbing_status": "WATCH"
+      "market_plumbing_score": 53.0,
+      "market_plumbing_status": "STRESS"
     },
     "warnings": [
       {
