@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-22",
-  "last_updated_utc": "2026-07-23T00:57:38.928551+00:00",
+  "date": "2026-07-23",
+  "last_updated_utc": "2026-07-24T00:53:51.443106+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-07-22",
-    "last_updated_utc": "2026-07-23T00:57:38.928551+00:00",
+    "latest_trading_date": "2026-07-23",
+    "last_updated_utc": "2026-07-24T00:53:51.443106+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-07-22",
+    "latest_trading_date": "2026-07-23",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -34,7 +34,7 @@
       "Bottleneck Score is high, meaning hardware scarcity is still being rewarded.",
       "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.",
       "Stress is rising/high, showing strain in high-beta AI infrastructure or credit proxies.",
-      "Funding confirmation is partial: hyperscaler score 44.0, neocloud score 72.0."
+      "Funding confirmation is partial: hyperscaler score 45.0, neocloud score 70.0."
     ],
     "watch_next": [
       "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
@@ -55,23 +55,23 @@
       "message": "Hardware bottleneck stocks remain strong while stress is rising. This can resemble a late-cycle squeeze."
     },
     {
-      "type": "Two_Speed_Funding_Stress",
-      "severity": "high",
-      "message": "Neocloud financing stress is elevated, while broad hyperscaler funding stress is not yet confirmed."
+      "type": "Narrow_Leadership",
+      "severity": "medium",
+      "message": "Bottleneck strength is narrow. Fewer AI-chain stocks are confirming the move."
     }
   ],
   "scores": {
-    "demand": 31.4,
-    "bottleneck": 63.8,
-    "substitution": 45.7,
-    "stress": 89.9,
-    "breadth": 45.5
+    "demand": 27.3,
+    "bottleneck": 69.9,
+    "substitution": 55.9,
+    "stress": 89.2,
+    "breadth": 44.6
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 7.17,
-    "TSM_SMH_20D": 2.17,
-    "AVGO_NVDA_20D": -1.63,
-    "HYG_LQD_20D": 1.74
+    "NVDA_QQQ_20D": 7.53,
+    "TSM_SMH_20D": 0.53,
+    "AVGO_NVDA_20D": -2.18,
+    "HYG_LQD_20D": 2.22
   },
   "warnings": [],
   "core_confidence": "High",
@@ -82,25 +82,19 @@
     "confidence_action": "unchanged",
     "is_stale": false,
     "age_days": 0.2,
-    "source_as_of": "2026-07-22T21:21:15+00:00",
+    "source_as_of": "2026-07-23T21:12:39+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
-      "hyperscaler_funding_score": 44.0,
+      "hyperscaler_funding_score": 45.0,
       "hyperscaler_status": "WATCH",
       "hyperscaler_coverage_ratio": 0.65,
-      "neocloud_financing_score": 72.0,
-      "neocloud_status": "CREDIT STRESS CONFIRMED",
-      "market_plumbing_score": 54.0,
-      "market_plumbing_status": "STRESS"
+      "neocloud_financing_score": 70.0,
+      "neocloud_status": "STRESS",
+      "market_plumbing_score": 46.0,
+      "market_plumbing_status": "WATCH"
     },
-    "warnings": [
-      {
-        "type": "Two_Speed_Funding_Stress",
-        "severity": "high",
-        "message": "Neocloud financing stress is elevated, while broad hyperscaler funding stress is not yet confirmed."
-      }
-    ],
+    "warnings": [],
     "methodology": "Diagnostic overlay only; it does not alter Demand, Bottleneck, Rotation, Stress, Breadth, or the hard regime classification."
   }
 }
