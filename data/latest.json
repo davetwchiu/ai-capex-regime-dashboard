@@ -1,6 +1,6 @@
 {
-  "date": "2026-07-30",
-  "last_updated_utc": "2026-07-31T00:59:51.607686+00:00",
+  "date": "2026-07-31",
+  "last_updated_utc": "2026-08-01T00:59:54.331320+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-07-30",
-    "last_updated_utc": "2026-07-31T00:59:51.607686+00:00",
+    "latest_trading_date": "2026-07-31",
+    "last_updated_utc": "2026-08-01T00:59:54.331320+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-07-30",
+    "latest_trading_date": "2026-07-31",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -34,7 +34,7 @@
       "Bottleneck Score is high, meaning hardware scarcity is still being rewarded.",
       "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.",
       "Stress is rising/high, showing strain in high-beta AI infrastructure or credit proxies.",
-      "Funding confirmation is partial: hyperscaler score 46.0, neocloud score 66.0."
+      "Funding confirmation is partial: hyperscaler score 45.0, neocloud score 66.0."
     ],
     "watch_next": [
       "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
@@ -44,6 +44,11 @@
     "investor_reading": "Hardware names may still look strong, but risk is rising because customer-side ROI confirmation is less clear. This environment typically warrants caution and a preference for quality over highly levered beta."
   },
   "divergence_warnings": [
+    {
+      "type": "NVDA_Demand_Divergence",
+      "severity": "medium",
+      "message": "NVIDIA is outperforming QQQ, but demand/platform confirmation is weak."
+    },
     {
       "type": "Late_Cycle_Squeeze",
       "severity": "high",
@@ -56,17 +61,17 @@
     }
   ],
   "scores": {
-    "demand": 40.3,
-    "bottleneck": 64.9,
-    "substitution": 46.1,
-    "stress": 84.7,
-    "breadth": 26.8
+    "demand": 48.2,
+    "bottleneck": 64.4,
+    "substitution": 45.4,
+    "stress": 81.7,
+    "breadth": 33.9
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 4.45,
-    "TSM_SMH_20D": 3.93,
-    "AVGO_NVDA_20D": 6.29,
-    "HYG_LQD_20D": 1.74
+    "NVDA_QQQ_20D": 6.49,
+    "TSM_SMH_20D": 1.85,
+    "AVGO_NVDA_20D": 4.96,
+    "HYG_LQD_20D": 1.91
   },
   "warnings": [],
   "core_confidence": "High",
@@ -77,16 +82,16 @@
     "confidence_action": "unchanged",
     "is_stale": false,
     "age_days": 0.2,
-    "source_as_of": "2026-07-30T21:17:36+00:00",
+    "source_as_of": "2026-07-31T21:13:42+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
-      "hyperscaler_funding_score": 46.0,
+      "hyperscaler_funding_score": 45.0,
       "hyperscaler_status": "WATCH",
       "hyperscaler_coverage_ratio": 0.65,
       "neocloud_financing_score": 66.0,
       "neocloud_status": "STRESS",
-      "market_plumbing_score": 59.0,
+      "market_plumbing_score": 54.0,
       "market_plumbing_status": "STRESS"
     },
     "warnings": [],
