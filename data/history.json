@@ -1328,5 +1328,24 @@
     },
     "core_confidence": "Low",
     "funding_confirmation_status": "PARTIAL"
+  },
+  {
+    "date": "2026-08-13",
+    "regime": "Mixed / Transition",
+    "regime_name": "Transitioning Regime",
+    "closest_regime": {
+      "code": "B",
+      "name": "Bottleneck Easing, ROI Holding"
+    },
+    "confidence": "Low",
+    "scores": {
+      "demand": 42.1,
+      "bottleneck": 83.7,
+      "substitution": 80.8,
+      "stress": 30.9,
+      "breadth": 67.9
+    },
+    "core_confidence": "Low",
+    "funding_confirmation_status": "PARTIAL"
   }
 ]
