@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-14",
-  "last_updated_utc": "2026-08-14T23:43:11.734965+00:00",
+  "date": "2026-08-17",
+  "last_updated_utc": "2026-08-17T23:42:45.526441+00:00",
   "market_read": "AI-chain breadth remains healthy and stress is low, but leadership is rotating toward ASIC/networking rather than pure GPU beta. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-08-14",
-    "last_updated_utc": "2026-08-14T23:43:11.734965+00:00",
+    "latest_trading_date": "2026-08-17",
+    "last_updated_utc": "2026-08-17T23:42:45.526441+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-08-14",
+    "latest_trading_date": "2026-08-17",
     "calendar_age_days": 0,
     "is_stale": false
   },
@@ -31,10 +31,10 @@
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is B. This means the model does not see a clean regime break, but the current pattern most resembles Bottleneck Easing, ROI Holding. The market is not rejecting the AI CAPEX trade. It is rotating inside the trade. AI-chain breadth remains healthy and stress is low, but leadership is shifting from pure NVIDIA/GPU beta toward ASIC, networking, and scale-out infrastructure. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "why": [
-      "ASIC / Networking Rotation is elevated (74), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
+      "ASIC / Networking Rotation is elevated (76), meaning AVGO/MRVL/ANET/CRDO are outperforming NVDA on the selected horizons.",
       "Stress is contained, so the market is not currently pricing broad CAPEX funding pressure.",
       "Breadth is healthy, so the move is not limited to one or two AI stocks.",
-      "Funding confirmation is partial: hyperscaler score 43.0, neocloud score 64.0."
+      "Funding confirmation is partial: hyperscaler score 43.0, neocloud score 63.0."
     ],
     "watch_next": [
       "If Demand Score rises above 60 while Stress stays low, the regime shifts toward a broad, confirmed bull phase (A).",
@@ -52,17 +52,17 @@
     }
   ],
   "scores": {
-    "demand": 40.4,
-    "bottleneck": 78.2,
-    "substitution": 74.2,
-    "stress": 27.1,
-    "breadth": 68.8
+    "demand": 36.4,
+    "bottleneck": 84.6,
+    "substitution": 76.4,
+    "stress": 28.3,
+    "breadth": 66.1
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 5.88,
-    "TSM_SMH_20D": 1.4,
-    "AVGO_NVDA_20D": -5.04,
-    "HYG_LQD_20D": 1.47
+    "NVDA_QQQ_20D": 5.83,
+    "TSM_SMH_20D": 0.82,
+    "AVGO_NVDA_20D": -6.92,
+    "HYG_LQD_20D": 1.32
   },
   "warnings": [],
   "core_confidence": "Low",
@@ -73,16 +73,16 @@
     "confidence_action": "unchanged",
     "is_stale": false,
     "age_days": 0.1,
-    "source_as_of": "2026-08-14T20:36:28+00:00",
+    "source_as_of": "2026-08-17T20:33:37+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
       "hyperscaler_funding_score": 43.0,
       "hyperscaler_status": "WATCH",
       "hyperscaler_coverage_ratio": 0.65,
-      "neocloud_financing_score": 64.0,
+      "neocloud_financing_score": 63.0,
       "neocloud_status": "STRESS",
-      "market_plumbing_score": 42.0,
+      "market_plumbing_score": 41.0,
       "market_plumbing_status": "WATCH"
     },
     "warnings": [],
