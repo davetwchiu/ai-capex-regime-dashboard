@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-21",
-  "last_updated_utc": "2026-08-21T23:44:22.434633+00:00",
+  "date": "2026-08-24",
+  "last_updated_utc": "2026-08-24T23:42:35.235952+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-08-21",
-    "last_updated_utc": "2026-08-21T23:44:22.434633+00:00",
+    "latest_trading_date": "2026-08-24",
+    "last_updated_utc": "2026-08-24T23:42:35.235952+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-08-21",
+    "latest_trading_date": "2026-08-24",
     "calendar_age_days": 0,
     "is_stale": false
   },
@@ -27,13 +27,13 @@
     "code": "C",
     "name": "Hardware Late-Cycle Squeeze"
   },
-  "confidence": "Medium",
+  "confidence": "High",
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is C. This means the model does not see a clean regime break, but the current pattern most resembles Hardware Late-Cycle Squeeze. The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "why": [
       "Bottleneck Score is high, meaning hardware scarcity is still being rewarded.",
       "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.",
-      "Funding confirmation is partial: hyperscaler score 45.0, neocloud score 65.0."
+      "Funding confirmation is partial: hyperscaler score 43.0, neocloud score 65.0."
     ],
     "watch_next": [
       "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
@@ -42,34 +42,40 @@
     ],
     "investor_reading": "Hardware names may still look strong, but risk is rising because customer-side ROI confirmation is less clear. This environment typically warrants caution and a preference for quality over highly levered beta."
   },
-  "divergence_warnings": [],
+  "divergence_warnings": [
+    {
+      "type": "Narrow_Leadership",
+      "severity": "medium",
+      "message": "Bottleneck strength is narrow. Fewer AI-chain stocks are confirming the move."
+    }
+  ],
   "scores": {
-    "demand": 47.3,
-    "bottleneck": 77.6,
-    "substitution": 59.6,
-    "stress": 51.7,
-    "breadth": 46.4
+    "demand": 47.4,
+    "bottleneck": 80.1,
+    "substitution": 57.0,
+    "stress": 52.0,
+    "breadth": 42.0
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -0.46,
-    "TSM_SMH_20D": 3.99,
-    "AVGO_NVDA_20D": -7.34,
-    "HYG_LQD_20D": 0.83
+    "NVDA_QQQ_20D": 2.54,
+    "TSM_SMH_20D": 3.08,
+    "AVGO_NVDA_20D": -12.47,
+    "HYG_LQD_20D": 0.91
   },
   "warnings": [],
-  "core_confidence": "Medium",
+  "core_confidence": "High",
   "funding_confirmation": {
     "status": "PARTIAL",
-    "core_confidence": "Medium",
-    "adjusted_confidence": "Medium",
+    "core_confidence": "High",
+    "adjusted_confidence": "High",
     "confidence_action": "unchanged",
     "is_stale": false,
     "age_days": 0.1,
-    "source_as_of": "2026-08-21T20:32:10+00:00",
+    "source_as_of": "2026-08-24T20:37:54+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
-      "hyperscaler_funding_score": 45.0,
+      "hyperscaler_funding_score": 43.0,
       "hyperscaler_status": "WATCH",
       "hyperscaler_coverage_ratio": 0.65,
       "neocloud_financing_score": 65.0,
