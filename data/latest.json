@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-26",
-  "last_updated_utc": "2026-08-27T04:35:06.353458+00:00",
+  "date": "2026-08-27",
+  "last_updated_utc": "2026-08-28T06:58:28.511975+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-08-26",
-    "last_updated_utc": "2026-08-27T04:35:06.353458+00:00",
+    "latest_trading_date": "2026-08-27",
+    "last_updated_utc": "2026-08-28T06:58:28.511975+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-08-26",
+    "latest_trading_date": "2026-08-27",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -27,13 +27,13 @@
     "code": "C",
     "name": "Hardware Late-Cycle Squeeze"
   },
-  "confidence": "Low",
+  "confidence": "High",
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is C. This means the model does not see a clean regime break, but the current pattern most resembles Hardware Late-Cycle Squeeze. The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "why": [
       "Bottleneck Score is high, meaning hardware scarcity is still being rewarded.",
       "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.",
-      "Funding confirmation is partial: hyperscaler score 42.0, neocloud score 61.0."
+      "Funding confirmation is partial: hyperscaler score 42.0, neocloud score 63.0."
     ],
     "watch_next": [
       "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
@@ -42,39 +42,45 @@
     ],
     "investor_reading": "Hardware names may still look strong, but risk is rising because customer-side ROI confirmation is less clear. This environment typically warrants caution and a preference for quality over highly levered beta."
   },
-  "divergence_warnings": [],
+  "divergence_warnings": [
+    {
+      "type": "NVDA_Demand_Divergence",
+      "severity": "high",
+      "message": "NVIDIA is outperforming QQQ, but demand/platform confirmation is weak."
+    }
+  ],
   "scores": {
-    "demand": 46.4,
-    "bottleneck": 82.7,
-    "substitution": 67.9,
-    "stress": 42.0,
-    "breadth": 54.5
+    "demand": 44.6,
+    "bottleneck": 66.1,
+    "substitution": 43.5,
+    "stress": 58.8,
+    "breadth": 50.9
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 2.84,
-    "TSM_SMH_20D": 1.26,
-    "AVGO_NVDA_20D": -14.32,
-    "HYG_LQD_20D": 0.36
+    "NVDA_QQQ_20D": 11.39,
+    "TSM_SMH_20D": -0.38,
+    "AVGO_NVDA_20D": -21.09,
+    "HYG_LQD_20D": 0.26
   },
   "warnings": [],
-  "core_confidence": "Low",
+  "core_confidence": "High",
   "funding_confirmation": {
     "status": "PARTIAL",
-    "core_confidence": "Low",
-    "adjusted_confidence": "Low",
+    "core_confidence": "High",
+    "adjusted_confidence": "High",
     "confidence_action": "unchanged",
     "is_stale": false,
-    "age_days": 0.2,
-    "source_as_of": "2026-08-26T23:14:38+00:00",
+    "age_days": 0.1,
+    "source_as_of": "2026-08-28T04:09:39+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
       "hyperscaler_funding_score": 42.0,
       "hyperscaler_status": "WATCH",
       "hyperscaler_coverage_ratio": 0.65,
-      "neocloud_financing_score": 61.0,
+      "neocloud_financing_score": 63.0,
       "neocloud_status": "STRESS",
-      "market_plumbing_score": 45.0,
+      "market_plumbing_score": 41.0,
       "market_plumbing_status": "WATCH"
     },
     "warnings": [],
