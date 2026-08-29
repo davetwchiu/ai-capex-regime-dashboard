@@ -1,6 +1,6 @@
 {
-  "date": "2026-08-27",
-  "last_updated_utc": "2026-08-28T06:58:28.511975+00:00",
+  "date": "2026-08-28",
+  "last_updated_utc": "2026-08-29T04:12:15.722060+00:00",
   "market_read": "Hardware scarcity remains supported, but platform demand confirmation is weakening. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-08-27",
-    "last_updated_utc": "2026-08-28T06:58:28.511975+00:00",
+    "latest_trading_date": "2026-08-28",
+    "last_updated_utc": "2026-08-29T04:12:15.722060+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-08-27",
+    "latest_trading_date": "2026-08-28",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -33,7 +33,7 @@
     "why": [
       "Bottleneck Score is high, meaning hardware scarcity is still being rewarded.",
       "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.",
-      "Funding confirmation is partial: hyperscaler score 42.0, neocloud score 63.0."
+      "Funding confirmation is partial: hyperscaler score 42.0, neocloud score 64.0."
     ],
     "watch_next": [
       "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
@@ -71,16 +71,16 @@
     "confidence_action": "unchanged",
     "is_stale": false,
     "age_days": 0.1,
-    "source_as_of": "2026-08-28T04:09:39+00:00",
+    "source_as_of": "2026-08-29T02:46:37+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
       "hyperscaler_funding_score": 42.0,
       "hyperscaler_status": "WATCH",
       "hyperscaler_coverage_ratio": 0.65,
-      "neocloud_financing_score": 63.0,
+      "neocloud_financing_score": 64.0,
       "neocloud_status": "STRESS",
-      "market_plumbing_score": 41.0,
+      "market_plumbing_score": 38.0,
       "market_plumbing_status": "WATCH"
     },
     "warnings": [],
