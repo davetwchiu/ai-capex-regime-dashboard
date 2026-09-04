@@ -1613,5 +1613,24 @@
     },
     "core_confidence": "High",
     "funding_confirmation_status": "PARTIAL"
+  },
+  {
+    "date": "2026-09-03",
+    "regime": "Mixed / Transition",
+    "regime_name": "Transitioning Regime",
+    "closest_regime": {
+      "code": "C",
+      "name": "Hardware Late-Cycle Squeeze"
+    },
+    "confidence": "Medium",
+    "scores": {
+      "demand": 46.7,
+      "bottleneck": 56.2,
+      "substitution": 26.5,
+      "stress": 82.8,
+      "breadth": 34.8
+    },
+    "core_confidence": "Medium",
+    "funding_confirmation_status": "PARTIAL"
   }
 ]
