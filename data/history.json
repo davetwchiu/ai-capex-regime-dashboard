@@ -1670,5 +1670,24 @@
     },
     "core_confidence": "Medium",
     "funding_confirmation_status": "PARTIAL"
+  },
+  {
+    "date": "2026-09-09",
+    "regime": "Mixed / Transition",
+    "regime_name": "Transitioning Regime",
+    "closest_regime": {
+      "code": "A",
+      "name": "True Bottleneck Still Tight"
+    },
+    "confidence": "Medium",
+    "scores": {
+      "demand": 54.9,
+      "bottleneck": 58.2,
+      "substitution": 27.1,
+      "stress": 34.8,
+      "breadth": 62.5
+    },
+    "core_confidence": "Medium",
+    "funding_confirmation_status": "PARTIAL"
   }
 ]
