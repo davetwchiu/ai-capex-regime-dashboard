@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-10",
-  "last_updated_utc": "2026-09-11T01:14:27.255929+00:00",
+  "date": "2026-09-11",
+  "last_updated_utc": "2026-09-12T01:16:59.766542+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-09-10",
-    "last_updated_utc": "2026-09-11T01:14:27.255929+00:00",
+    "latest_trading_date": "2026-09-11",
+    "last_updated_utc": "2026-09-12T01:16:59.766542+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-09-10",
+    "latest_trading_date": "2026-09-11",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -27,12 +27,12 @@
     "code": "C",
     "name": "Hardware Late-Cycle Squeeze"
   },
-  "confidence": "Low",
+  "confidence": "Medium",
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is C. This means the model does not see a clean regime break, but the current pattern most resembles Hardware Late-Cycle Squeeze. The market may be entering a more fragile late-cycle setup: hardware bottleneck stocks remain strong, but platform demand confirmation is weakening and stress is rising. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "why": [
-      "Demand Score is weak/neutral, indicating platform ROI confirmation is lagging.",
-      "Funding confirmation is partial: hyperscaler score 44.0, neocloud score 51.0."
+      "Stress is rising/high, showing strain in high-beta AI infrastructure or credit proxies.",
+      "Funding confirmation is partial: hyperscaler score 40.0, neocloud score 55.0."
     ],
     "watch_next": [
       "If Demand falls further, the divergence between hardware providers and their customers widens dangerously.",
@@ -43,37 +43,37 @@
   },
   "divergence_warnings": [],
   "scores": {
-    "demand": 58.8,
-    "bottleneck": 57.0,
-    "substitution": 28.0,
-    "stress": 50.3,
-    "breadth": 48.2
+    "demand": 61.3,
+    "bottleneck": 52.7,
+    "substitution": 27.5,
+    "stress": 88.9,
+    "breadth": 39.3
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": 3.13,
-    "TSM_SMH_20D": 2.91,
-    "AVGO_NVDA_20D": -15.26,
-    "HYG_LQD_20D": 0.1
+    "NVDA_QQQ_20D": -0.37,
+    "TSM_SMH_20D": 3.94,
+    "AVGO_NVDA_20D": -10.82,
+    "HYG_LQD_20D": 0.54
   },
   "warnings": [],
-  "core_confidence": "Low",
+  "core_confidence": "Medium",
   "funding_confirmation": {
     "status": "PARTIAL",
-    "core_confidence": "Low",
-    "adjusted_confidence": "Low",
+    "core_confidence": "Medium",
+    "adjusted_confidence": "Medium",
     "confidence_action": "unchanged",
     "is_stale": false,
     "age_days": 0.1,
-    "source_as_of": "2026-09-10T22:24:30+00:00",
+    "source_as_of": "2026-09-11T22:23:54+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
-      "hyperscaler_funding_score": 44.0,
+      "hyperscaler_funding_score": 40.0,
       "hyperscaler_status": "WATCH",
       "hyperscaler_coverage_ratio": 0.65,
-      "neocloud_financing_score": 51.0,
+      "neocloud_financing_score": 55.0,
       "neocloud_status": "STRESS",
-      "market_plumbing_score": 42.0,
+      "market_plumbing_score": 49.0,
       "market_plumbing_status": "WATCH"
     },
     "warnings": [],
