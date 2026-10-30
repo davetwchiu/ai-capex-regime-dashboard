@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-28",
-  "last_updated_utc": "2026-10-29T02:34:24.226782+00:00",
-  "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
+  "date": "2026-10-29",
+  "last_updated_utc": "2026-10-30T02:43:51.590409+00:00",
+  "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding data does not confirm the price-led stress regime.",
   "data_health": {
     "status": "OK",
     "source": "yfinance",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-10-28",
-    "last_updated_utc": "2026-10-29T02:34:24.226782+00:00",
+    "latest_trading_date": "2026-10-29",
+    "last_updated_utc": "2026-10-30T02:43:51.590409+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-10-28",
+    "latest_trading_date": "2026-10-29",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -29,13 +29,13 @@
   },
   "confidence": "Low",
   "interpretation": {
-    "plain_english": "The hard regime is mixed, but the closest profile is D. This means the model does not see a clean regime break, but the current pattern most resembles CAPEX Bubble Fear. The market is pricing rising AI CAPEX bubble concern: demand confirmation is weak, bottleneck leadership is fading, stress is high, and breadth is poor. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
+    "plain_english": "The hard regime is mixed, but the closest profile is D. This means the model does not see a clean regime break, but the current pattern most resembles CAPEX Bubble Fear. The market is pricing rising AI CAPEX bubble concern: demand confirmation is weak, bottleneck leadership is fading, stress is high, and breadth is poor. Funding data does not confirm the price-led stress regime.",
     "why": [
       "Demand Score is weak, suggesting lack of confidence in platform ROI.",
       "Bottleneck leadership is fading against broader benchmarks.",
       "Stress is high, reflecting drawdowns in high-beta AI infrastructure and neocloud names.",
       "Breadth is poor, indicating very narrow participation across the AI chain.",
-      "Funding confirmation is partial: hyperscaler score 44.0, neocloud score 56.0."
+      "Funding confirmation is not confirmed: hyperscaler score 24.0, neocloud score 39.0."
     ],
     "watch_next": [
       "Watch for any recovery in Breadth or Demand as early signs of stabilization.",
@@ -44,42 +44,54 @@
     ],
     "investor_reading": "The market is punishing high-beta AI infrastructure and long-duration hardware stories. Balance-sheet quality, cash-flow durability, and defensive positioning matter more in this regime."
   },
-  "divergence_warnings": [],
+  "divergence_warnings": [
+    {
+      "type": "Market_Stress_Unconfirmed_By_Credit",
+      "severity": "medium",
+      "message": "High market stress lacks funding confirmation and may still reflect valuation or liquidity pressure."
+    }
+  ],
   "scores": {
-    "demand": 48.6,
-    "bottleneck": 46.1,
-    "substitution": 42.6,
-    "stress": 94.5,
-    "breadth": 29.5
+    "demand": 47.5,
+    "bottleneck": 42.4,
+    "substitution": 38.8,
+    "stress": 94.4,
+    "breadth": 22.3
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -3.78,
-    "TSM_SMH_20D": 3.13,
-    "AVGO_NVDA_20D": 5.87,
-    "HYG_LQD_20D": -1.35
+    "NVDA_QQQ_20D": -3.85,
+    "TSM_SMH_20D": 3.12,
+    "AVGO_NVDA_20D": 7.85,
+    "HYG_LQD_20D": -1.26
   },
   "warnings": [],
-  "core_confidence": "Low",
+  "core_confidence": "Medium",
   "funding_confirmation": {
-    "status": "PARTIAL",
-    "core_confidence": "Low",
+    "status": "NOT CONFIRMED",
+    "core_confidence": "Medium",
     "adjusted_confidence": "Low",
-    "confidence_action": "unchanged",
+    "confidence_action": "lowered",
     "is_stale": false,
     "age_days": 0.1,
-    "source_as_of": "2026-10-28T23:57:25+00:00",
+    "source_as_of": "2026-10-29T23:52:54+00:00",
     "sync_status": "ok",
-    "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
+    "summary": "Funding data does not confirm the price-led stress regime.",
     "signals": {
-      "hyperscaler_funding_score": 44.0,
-      "hyperscaler_status": "WATCH",
-      "hyperscaler_coverage_ratio": 0.65,
-      "neocloud_financing_score": 56.0,
-      "neocloud_status": "STRESS",
+      "hyperscaler_funding_score": 24.0,
+      "hyperscaler_status": "NORMAL",
+      "hyperscaler_coverage_ratio": 0.25,
+      "neocloud_financing_score": 39.0,
+      "neocloud_status": "WATCH",
       "market_plumbing_score": 55.0,
       "market_plumbing_status": "STRESS"
     },
-    "warnings": [],
+    "warnings": [
+      {
+        "type": "Market_Stress_Unconfirmed_By_Credit",
+        "severity": "medium",
+        "message": "High market stress lacks funding confirmation and may still reflect valuation or liquidity pressure."
+      }
+    ],
     "methodology": "Diagnostic overlay only; it does not alter Demand, Bottleneck, Rotation, Stress, Breadth, or the hard regime classification."
   }
 }

@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "as_of": "2026-10-28T23:57:25+00:00",
+  "as_of": "2026-10-29T23:52:54+00:00",
   "source_repo": "davetwchiu/ai-infrastructure-stress-cockpit",
   "hyperscaler_funding": {
-    "score": 44.0,
-    "status": "WATCH",
-    "coverage_ratio": 0.65,
+    "score": 24.0,
+    "status": "NORMAL",
+    "coverage_ratio": 0.25,
     "data_status": "partial"
   },
   "neocloud_financing": {
-    "score": 56.0,
-    "status": "STRESS",
-    "data_status": "ok"
+    "score": 39.0,
+    "status": "WATCH",
+    "data_status": "partial"
   },
   "market_plumbing": {
     "score": 55.0,
@@ -20,6 +20,6 @@
   },
   "source_summary": "Hyperscaler funding and cash stress, neocloud financing stress, and market-plumbing confirmation from the AI Infrastructure Stress Cockpit.",
   "sync_status": "ok",
-  "synced_at": "2026-10-29T02:34:16+00:00",
+  "synced_at": "2026-10-30T02:43:44+00:00",
   "source_url": "https://raw.githubusercontent.com/davetwchiu/ai-infrastructure-stress-cockpit/main/data/regime_modifier.json"
 }
