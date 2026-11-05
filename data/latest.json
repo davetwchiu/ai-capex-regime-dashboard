@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-03",
-  "last_updated_utc": "2026-11-04T03:03:41.772636+00:00",
+  "date": "2026-11-04",
+  "last_updated_utc": "2026-11-05T03:34:26.999154+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-11-03",
-    "last_updated_utc": "2026-11-04T03:03:41.772636+00:00",
+    "latest_trading_date": "2026-11-04",
+    "last_updated_utc": "2026-11-05T03:34:26.999154+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-11-03",
+    "latest_trading_date": "2026-11-04",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -31,11 +31,10 @@
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is D. This means the model does not see a clean regime break, but the current pattern most resembles CAPEX Bubble Fear. The market is pricing rising AI CAPEX bubble concern: demand confirmation is weak, bottleneck leadership is fading, stress is high, and breadth is poor. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "why": [
-      "Demand Score is weak, suggesting lack of confidence in platform ROI.",
       "Bottleneck leadership is fading against broader benchmarks.",
       "Stress is high, reflecting drawdowns in high-beta AI infrastructure and neocloud names.",
       "Breadth is poor, indicating very narrow participation across the AI chain.",
-      "Funding confirmation is partial: hyperscaler score 38.0, neocloud score 40.0."
+      "Funding confirmation is partial: hyperscaler score 38.0, neocloud score 43.0."
     ],
     "watch_next": [
       "Watch for any recovery in Breadth or Demand as early signs of stabilization.",
@@ -46,17 +45,17 @@
   },
   "divergence_warnings": [],
   "scores": {
-    "demand": 49.7,
-    "bottleneck": 41.3,
-    "substitution": 28.2,
+    "demand": 56.6,
+    "bottleneck": 38.1,
+    "substitution": 27.9,
     "stress": 95.4,
-    "breadth": 18.8
+    "breadth": 21.4
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -3.81,
-    "TSM_SMH_20D": 1.95,
-    "AVGO_NVDA_20D": 1.98,
-    "HYG_LQD_20D": -1.92
+    "NVDA_QQQ_20D": -7.04,
+    "TSM_SMH_20D": 3.13,
+    "AVGO_NVDA_20D": 2.17,
+    "HYG_LQD_20D": -1.91
   },
   "warnings": [],
   "core_confidence": "Low",
@@ -67,16 +66,16 @@
     "confidence_action": "unchanged",
     "is_stale": false,
     "age_days": 0.1,
-    "source_as_of": "2026-11-04T00:32:02+00:00",
+    "source_as_of": "2026-11-05T00:48:52+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
       "hyperscaler_funding_score": 38.0,
       "hyperscaler_status": "WATCH",
       "hyperscaler_coverage_ratio": 0.25,
-      "neocloud_financing_score": 40.0,
+      "neocloud_financing_score": 43.0,
       "neocloud_status": "WATCH",
-      "market_plumbing_score": 65.0,
+      "market_plumbing_score": 62.0,
       "market_plumbing_status": "STRESS"
     },
     "warnings": [],
