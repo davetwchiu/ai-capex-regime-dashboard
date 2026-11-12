@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-10",
-  "last_updated_utc": "2026-11-11T02:52:41.778518+00:00",
+  "date": "2026-11-11",
+  "last_updated_utc": "2026-11-12T03:57:01.596612+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-11-10",
-    "last_updated_utc": "2026-11-11T02:52:41.778518+00:00",
+    "latest_trading_date": "2026-11-11",
+    "last_updated_utc": "2026-11-12T03:57:01.596612+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-11-10",
+    "latest_trading_date": "2026-11-11",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -45,17 +45,17 @@
   },
   "divergence_warnings": [],
   "scores": {
-    "demand": 63.1,
-    "bottleneck": 45.6,
-    "substitution": 49.7,
-    "stress": 94.3,
-    "breadth": 22.3
+    "demand": 60.7,
+    "bottleneck": 47.3,
+    "substitution": 59.1,
+    "stress": 79.5,
+    "breadth": 32.1
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -16.84,
-    "TSM_SMH_20D": 6.84,
-    "AVGO_NVDA_20D": 19.0,
-    "HYG_LQD_20D": -1.18
+    "NVDA_QQQ_20D": -16.2,
+    "TSM_SMH_20D": 6.36,
+    "AVGO_NVDA_20D": 21.2,
+    "HYG_LQD_20D": -0.43
   },
   "warnings": [],
   "core_confidence": "Low",
@@ -66,7 +66,7 @@
     "confidence_action": "unchanged",
     "is_stale": false,
     "age_days": 0.1,
-    "source_as_of": "2026-11-11T00:31:30+00:00",
+    "source_as_of": "2026-11-12T01:51:25+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
