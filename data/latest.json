@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-12",
-  "last_updated_utc": "2026-11-13T03:28:35.194272+00:00",
+  "date": "2026-11-13",
+  "last_updated_utc": "2026-11-14T03:24:42.121877+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,30 +11,30 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-11-12",
-    "last_updated_utc": "2026-11-13T03:28:35.194272+00:00",
+    "latest_trading_date": "2026-11-13",
+    "last_updated_utc": "2026-11-14T03:24:42.121877+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-11-12",
+    "latest_trading_date": "2026-11-13",
     "calendar_age_days": 1,
     "is_stale": false
   },
-  "regime": "Mixed / Transition",
-  "regime_name": "Transitioning Regime",
+  "regime": "B",
+  "regime_name": "Bottleneck Easing, ROI Holding",
   "closest_regime": {
     "code": "D",
     "name": "CAPEX Bubble Fear"
   },
   "confidence": "Low",
   "interpretation": {
-    "plain_english": "The hard regime is mixed, but the closest profile is D. This means the model does not see a clean regime break, but the current pattern most resembles CAPEX Bubble Fear. The market is pricing rising AI CAPEX bubble concern: demand confirmation is weak, bottleneck leadership is fading, stress is high, and breadth is poor. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
+    "plain_english": "The market is pricing rising AI CAPEX bubble concern: demand confirmation is weak, bottleneck leadership is fading, stress is high, and breadth is poor. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "why": [
       "Bottleneck leadership is fading against broader benchmarks.",
       "Stress is high, reflecting drawdowns in high-beta AI infrastructure and neocloud names.",
       "Breadth is poor, indicating very narrow participation across the AI chain.",
-      "Funding confirmation is partial: hyperscaler score 47.0, neocloud score 57.0."
+      "Funding confirmation is partial: hyperscaler score 45.0, neocloud score 58.0."
     ],
     "watch_next": [
       "Watch for any recovery in Breadth or Demand as early signs of stabilization.",
@@ -45,17 +45,17 @@
   },
   "divergence_warnings": [],
   "scores": {
-    "demand": 59.2,
-    "bottleneck": 49.8,
-    "substitution": 67.6,
-    "stress": 91.9,
-    "breadth": 32.1
+    "demand": 63.8,
+    "bottleneck": 49.7,
+    "substitution": 65.5,
+    "stress": 89.8,
+    "breadth": 33.0
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -18.02,
-    "TSM_SMH_20D": 6.25,
-    "AVGO_NVDA_20D": 29.31,
-    "HYG_LQD_20D": 0.38
+    "NVDA_QQQ_20D": -19.73,
+    "TSM_SMH_20D": 6.46,
+    "AVGO_NVDA_20D": 29.5,
+    "HYG_LQD_20D": 0.81
   },
   "warnings": [],
   "core_confidence": "Low",
@@ -66,16 +66,16 @@
     "confidence_action": "unchanged",
     "is_stale": false,
     "age_days": 0.1,
-    "source_as_of": "2026-11-13T00:58:35+00:00",
+    "source_as_of": "2026-11-14T00:49:16+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "signals": {
-      "hyperscaler_funding_score": 47.0,
+      "hyperscaler_funding_score": 45.0,
       "hyperscaler_status": "WATCH",
       "hyperscaler_coverage_ratio": 0.65,
-      "neocloud_financing_score": 57.0,
+      "neocloud_financing_score": 58.0,
       "neocloud_status": "STRESS",
-      "market_plumbing_score": 73.0,
+      "market_plumbing_score": 76.0,
       "market_plumbing_status": "CREDIT STRESS CONFIRMED"
     },
     "warnings": [],
