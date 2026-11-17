@@ -2582,5 +2582,24 @@
     },
     "core_confidence": "Low",
     "funding_confirmation_status": "PARTIAL"
+  },
+  {
+    "date": "2026-11-16",
+    "regime": "B",
+    "regime_name": "Bottleneck Easing, ROI Holding",
+    "closest_regime": {
+      "code": "D",
+      "name": "CAPEX Bubble Fear"
+    },
+    "confidence": "Low",
+    "scores": {
+      "demand": 60.4,
+      "bottleneck": 47.1,
+      "substitution": 61.3,
+      "stress": 92.4,
+      "breadth": 26.8
+    },
+    "core_confidence": "Low",
+    "funding_confirmation_status": "PARTIAL"
   }
 ]
