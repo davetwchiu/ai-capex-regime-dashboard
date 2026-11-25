@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-23",
-  "last_updated_utc": "2026-11-24T06:59:35.188478+00:00",
+  "date": "2026-11-24",
+  "last_updated_utc": "2026-11-25T05:31:25.146909+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-11-23",
-    "last_updated_utc": "2026-11-24T06:59:35.188478+00:00",
+    "latest_trading_date": "2026-11-24",
+    "last_updated_utc": "2026-11-25T05:31:25.146909+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-11-23",
+    "latest_trading_date": "2026-11-24",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -45,17 +45,17 @@
   },
   "divergence_warnings": [],
   "scores": {
-    "demand": 57.9,
-    "bottleneck": 46.3,
-    "substitution": 55.0,
-    "stress": 93.5,
-    "breadth": 31.2
+    "demand": 61.2,
+    "bottleneck": 49.8,
+    "substitution": 51.1,
+    "stress": 93.8,
+    "breadth": 24.1
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -15.0,
-    "TSM_SMH_20D": 0.72,
-    "AVGO_NVDA_20D": 18.84,
-    "HYG_LQD_20D": -0.66
+    "NVDA_QQQ_20D": -17.18,
+    "TSM_SMH_20D": 3.45,
+    "AVGO_NVDA_20D": 16.66,
+    "HYG_LQD_20D": -0.89
   },
   "warnings": [],
   "core_confidence": "Low",
@@ -65,7 +65,7 @@
     "adjusted_confidence": "Low",
     "confidence_action": "unchanged",
     "is_stale": false,
-    "age_days": 0.1,
+    "age_days": 1.0,
     "source_as_of": "2026-11-24T04:41:02+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
