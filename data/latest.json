@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-24",
-  "last_updated_utc": "2026-11-25T05:31:25.146909+00:00",
+  "date": "2026-11-25",
+  "last_updated_utc": "2026-11-26T05:13:35.756457+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,13 +11,13 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-11-24",
-    "last_updated_utc": "2026-11-25T05:31:25.146909+00:00",
+    "latest_trading_date": "2026-11-25",
+    "last_updated_utc": "2026-11-26T05:13:35.756457+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-11-24",
+    "latest_trading_date": "2026-11-25",
     "calendar_age_days": 1,
     "is_stale": false
   },
@@ -27,7 +27,7 @@
     "code": "D",
     "name": "CAPEX Bubble Fear"
   },
-  "confidence": "Low",
+  "confidence": "Medium",
   "interpretation": {
     "plain_english": "The hard regime is mixed, but the closest profile is D. This means the model does not see a clean regime break, but the current pattern most resembles CAPEX Bubble Fear. The market is pricing rising AI CAPEX bubble concern: demand confirmation is weak, bottleneck leadership is fading, stress is high, and breadth is poor. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
     "why": [
@@ -45,27 +45,27 @@
   },
   "divergence_warnings": [],
   "scores": {
-    "demand": 61.2,
-    "bottleneck": 49.8,
-    "substitution": 51.1,
-    "stress": 93.8,
-    "breadth": 24.1
+    "demand": 57.4,
+    "bottleneck": 44.9,
+    "substitution": 53.3,
+    "stress": 94.7,
+    "breadth": 21.4
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -17.18,
-    "TSM_SMH_20D": 3.45,
-    "AVGO_NVDA_20D": 16.66,
-    "HYG_LQD_20D": -0.89
+    "NVDA_QQQ_20D": -18.05,
+    "TSM_SMH_20D": 3.47,
+    "AVGO_NVDA_20D": 16.2,
+    "HYG_LQD_20D": -1.46
   },
   "warnings": [],
-  "core_confidence": "Low",
+  "core_confidence": "Medium",
   "funding_confirmation": {
     "status": "PARTIAL",
-    "core_confidence": "Low",
-    "adjusted_confidence": "Low",
+    "core_confidence": "Medium",
+    "adjusted_confidence": "Medium",
     "confidence_action": "unchanged",
     "is_stale": false,
-    "age_days": 1.0,
+    "age_days": 2.0,
     "source_as_of": "2026-11-24T04:41:02+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
