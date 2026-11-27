@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "last_updated_utc": "2026-11-26T05:13:35.756457+00:00",
+  "last_updated_utc": "2026-11-27T05:11:41.063744+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -12,13 +12,13 @@
     "core_tickers_ok": true,
     "core_missing_tickers": [],
     "latest_trading_date": "2026-11-25",
-    "last_updated_utc": "2026-11-26T05:13:35.756457+00:00",
+    "last_updated_utc": "2026-11-27T05:11:41.063744+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
     "latest_trading_date": "2026-11-25",
-    "calendar_age_days": 1,
+    "calendar_age_days": 2,
     "is_stale": false
   },
   "regime": "Mixed / Transition",
@@ -65,7 +65,7 @@
     "adjusted_confidence": "Medium",
     "confidence_action": "unchanged",
     "is_stale": false,
-    "age_days": 2.0,
+    "age_days": 3.0,
     "source_as_of": "2026-11-24T04:41:02+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
