@@ -2734,5 +2734,24 @@
     },
     "core_confidence": "Medium",
     "funding_confirmation_status": "PARTIAL"
+  },
+  {
+    "date": "2026-11-27",
+    "regime": "Mixed / Transition",
+    "regime_name": "Transitioning Regime",
+    "closest_regime": {
+      "code": "D",
+      "name": "CAPEX Bubble Fear"
+    },
+    "confidence": "Medium",
+    "scores": {
+      "demand": 58.3,
+      "bottleneck": 46.0,
+      "substitution": 66.6,
+      "stress": 93.9,
+      "breadth": 23.2
+    },
+    "core_confidence": "Medium",
+    "funding_confirmation_status": "PARTIAL"
   }
 ]

@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-25",
-  "last_updated_utc": "2026-11-27T05:11:41.063744+00:00",
+  "date": "2026-11-27",
+  "last_updated_utc": "2026-11-28T04:47:53.044941+00:00",
   "market_read": "Market signals are mixed, showing cross-currents between hardware bottlenecks and platform ROI confidence. Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
   "data_health": {
     "status": "OK",
@@ -11,14 +11,14 @@
     "failed_tickers": [],
     "core_tickers_ok": true,
     "core_missing_tickers": [],
-    "latest_trading_date": "2026-11-25",
-    "last_updated_utc": "2026-11-27T05:11:41.063744+00:00",
+    "latest_trading_date": "2026-11-27",
+    "last_updated_utc": "2026-11-28T04:47:53.044941+00:00",
     "is_stale": false,
     "message": "Data retrieval OK. 34 of 34 tickers retrieved. Core tickers available."
   },
   "data_freshness": {
-    "latest_trading_date": "2026-11-25",
-    "calendar_age_days": 2,
+    "latest_trading_date": "2026-11-27",
+    "calendar_age_days": 1,
     "is_stale": false
   },
   "regime": "Mixed / Transition",
@@ -43,19 +43,25 @@
     ],
     "investor_reading": "The market is punishing high-beta AI infrastructure and long-duration hardware stories. Balance-sheet quality, cash-flow durability, and defensive positioning matter more in this regime."
   },
-  "divergence_warnings": [],
+  "divergence_warnings": [
+    {
+      "type": "Funding_Data_Stale",
+      "severity": "medium",
+      "message": "Funding confirmation data is stale or unavailable; the market regime remains price-led."
+    }
+  ],
   "scores": {
-    "demand": 57.4,
-    "bottleneck": 44.9,
-    "substitution": 53.3,
-    "stress": 94.7,
-    "breadth": 21.4
+    "demand": 58.3,
+    "bottleneck": 46.0,
+    "substitution": 66.6,
+    "stress": 93.9,
+    "breadth": 23.2
   },
   "key_ratios": {
-    "NVDA_QQQ_20D": -18.05,
-    "TSM_SMH_20D": 3.47,
-    "AVGO_NVDA_20D": 16.2,
-    "HYG_LQD_20D": -1.46
+    "NVDA_QQQ_20D": -20.57,
+    "TSM_SMH_20D": 3.48,
+    "AVGO_NVDA_20D": 20.1,
+    "HYG_LQD_20D": -0.91
   },
   "warnings": [],
   "core_confidence": "Medium",
@@ -64,8 +70,8 @@
     "core_confidence": "Medium",
     "adjusted_confidence": "Medium",
     "confidence_action": "unchanged",
-    "is_stale": false,
-    "age_days": 3.0,
+    "is_stale": true,
+    "age_days": 4.0,
     "source_as_of": "2026-11-24T04:41:02+00:00",
     "sync_status": "ok",
     "summary": "Funding confirmation is partial: fringe borrowers are weaker, but broad hyperscaler credit has not fully deteriorated.",
@@ -78,7 +84,13 @@
       "market_plumbing_score": 87.0,
       "market_plumbing_status": "CREDIT STRESS CONFIRMED"
     },
-    "warnings": [],
+    "warnings": [
+      {
+        "type": "Funding_Data_Stale",
+        "severity": "medium",
+        "message": "Funding confirmation data is stale or unavailable; the market regime remains price-led."
+      }
+    ],
     "methodology": "Diagnostic overlay only; it does not alter Demand, Bottleneck, Rotation, Stress, Breadth, or the hard regime classification."
   }
 }
